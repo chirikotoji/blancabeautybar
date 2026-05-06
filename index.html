@@ -399,12 +399,11 @@
       <div class="relative h-full overflow-hidden bg-cream order-1">
         <video
           id="russianRotation"
-          muted playsinline preload="auto"
+          muted playsinline preload="auto" autoplay loop
+          src="media/client/russian-rotation-web.mp4"
           poster="media/client/nail-navy-french.jpg"
           class="absolute inset-0 w-full h-full object-cover"
-          aria-label="Rotating view of a Blanca Russian E-File manicure">
-          <source src="media/client/russian-rotation-web.mp4" type="video/mp4"/>
-        </video>
+          aria-label="Rotating view of a Blanca Russian E-File manicure"></video>
 
         <div class="absolute left-5 top-5 z-10 award">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 1-5 4.7 1.3 7.3L12 18l-6.3 3.5L7 14.2 2 9.5l7-1z"/></svg>
@@ -1054,20 +1053,31 @@
 
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.0.42/dist/lenis.min.js"></script>
 <script>
-  const lenis = new Lenis({
-    duration: 1.05,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    smoothWheel: true, smoothTouch: false,
-  });
-  function raf(time){ lenis.raf(time); requestAnimationFrame(raf); }
-  requestAnimationFrame(raf);
+  // Smooth scroll — optional, gracefully degrades if Lenis CDN fails
+  let lenis = null;
+  try {
+    if (typeof Lenis !== 'undefined') {
+      lenis = new Lenis({
+        duration: 1.05,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smoothWheel: true, smoothTouch: false,
+      });
+      const raf = (time) => { lenis.raf(time); requestAnimationFrame(raf); };
+      requestAnimationFrame(raf);
+    }
+  } catch (e) { console.warn('Lenis unavailable — falling back to native scroll', e); }
 
+  // Anchor scrolls — use Lenis if present, otherwise native smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
       const id = a.getAttribute('href');
       if (id.length > 1) {
         const el = document.querySelector(id);
-        if (el) { e.preventDefault(); lenis.scrollTo(el, { offset: -70, duration: 1.2 }); }
+        if (el) {
+          e.preventDefault();
+          if (lenis) lenis.scrollTo(el, { offset: -70, duration: 1.2 });
+          else el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
       }
     });
   });
