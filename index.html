@@ -1107,7 +1107,7 @@
     const frames = sec.querySelectorAll('.rfx');
     const steps = sec.querySelectorAll('.rsn-step');
     if (!track || !frames.length || !steps.length) return;
-    let lastFrame = 0;
+    let lastFrame = 0, lastStep = 0;
     function render() {
       const rect = track.getBoundingClientRect();
       const total = track.offsetHeight - window.innerHeight;
@@ -1120,13 +1120,31 @@
         lastFrame = fIdx;
       }
       const sIdx = Math.min(steps.length - 1, Math.floor(progress * (steps.length - 0.001)));
-      steps.forEach((s, i) => s.classList.toggle('active', i === sIdx));
+      if (sIdx !== lastStep) {
+        steps[lastStep].classList.remove('active');
+        steps[sIdx].classList.add('active');
+        lastStep = sIdx;
+      }
     }
-    let ticking = false;
-    function onScroll() {
-      if (!ticking) { requestAnimationFrame(() => { render(); ticking = false; }); ticking = true; }
+    // Drive via rAF while the track is on-screen — scroll events don't reach all contexts.
+    let rafId = null, isVisible = false;
+    function tick() {
+      render();
+      if (isVisible) rafId = requestAnimationFrame(tick);
     }
-    window.addEventListener('scroll', onScroll, { passive: true });
+    const visObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          if (!isVisible) { isVisible = true; tick(); }
+        } else {
+          isVisible = false;
+          if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
+        }
+      });
+    }, { rootMargin: '100px 0px' });
+    visObs.observe(track);
+    // Also re-render on explicit events as a belt-and-braces measure.
+    window.addEventListener('scroll', render, { passive: true });
     window.addEventListener('resize', render);
     render();
   })();
