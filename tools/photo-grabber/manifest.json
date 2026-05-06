@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Blanca Photo Grabber",
+  "version": "1.0.0",
+  "description": "Save all photos from an Instagram profile to ~/Downloads/blanca/. Built for the Blanca Beauty Bar preview-site project.",
+  "permissions": ["activeTab", "downloads", "scripting", "storage"],
+  "host_permissions": [
+    "https://www.instagram.com/*",
+    "https://*.cdninstagram.com/*",
+    "https://*.fbcdn.net/*",
+    "https://images.fresha.com/*",
+    "https://www.fresha.com/*"
+  ],
+  "action": {
+    "default_title": "Save photos from this page",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}

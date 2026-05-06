@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Blanca Photo Grabber</title>
+<style>
+  :root { --paper: #FAFAF7; --ink: #0F0E0C; --gold: #B89248; --stone: #7A6F5F; --warm: #F4F0E8; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    width: 320px; padding: 18px 18px 16px;
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", system-ui, sans-serif;
+    background: var(--paper); color: var(--ink); font-size: 13px;
+  }
+  h1 { font-family: "Times New Roman", serif; font-weight: 300; font-size: 22px; letter-spacing: -0.02em; margin: 0 0 2px; }
+  .sub { color: var(--stone); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 16px; }
+  label { display: block; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--stone); margin: 14px 0 6px; }
+  input[type=text] {
+    width: 100%; box-sizing: border-box; padding: 9px 12px;
+    border: 1px solid rgba(15,14,12,.18); border-radius: 8px;
+    background: #fff; font-size: 13px; color: var(--ink);
+  }
+  .opts { display: flex; gap: 14px; align-items: center; margin-top: 8px; font-size: 12px; color: var(--stone); }
+  .opts label { display: flex; gap: 6px; margin: 0; text-transform: none; letter-spacing: 0; font-size: 12px; color: var(--ink); }
+  .row { display: flex; gap: 8px; }
+  button {
+    flex: 1; padding: 11px 14px; border-radius: 999px;
+    font-size: 12px; letter-spacing: .14em; text-transform: uppercase; font-weight: 600;
+    cursor: pointer; transition: background .25s, color .25s, border-color .25s;
+  }
+  .btn-go { background: var(--ink); color: var(--paper); border: 1px solid var(--ink); }
+  .btn-go:hover { background: var(--gold); border-color: var(--gold); }
+  .btn-go:disabled { background: var(--stone); border-color: var(--stone); cursor: wait; }
+  .btn-scroll { background: transparent; color: var(--ink); border: 1px solid rgba(15,14,12,.4); }
+  .btn-scroll:hover { background: var(--ink); color: var(--paper); }
+  #status {
+    margin-top: 14px; min-height: 36px;
+    background: var(--warm); border-radius: 8px; padding: 10px 12px;
+    font-size: 12px; color: var(--stone); line-height: 1.5;
+  }
+  #status .ok { color: #267a47; font-weight: 500; }
+  #status .err { color: #a53030; }
+  #status .gold { color: var(--gold); font-weight: 600; }
+  .hint { margin-top: 12px; font-size: 11px; color: var(--stone); line-height: 1.45; }
+  .hint b { color: var(--ink); font-weight: 600; }
+  .footer { margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(15,14,12,.08); font-size: 10px; color: var(--stone); letter-spacing: .08em; text-transform: uppercase; }
+</style>
+</head>
+<body>
+  <h1>Photo Grabber</h1>
+  <div class="sub">Blanca Beauty Bar · v1.0</div>
+
+  <label for="folder">Save to ~/Downloads/</label>
+  <input id="folder" type="text" value="blanca-ig" />
+
+  <div class="opts">
+    <label><input type="checkbox" id="optHd" checked /> high-res only</label>
+    <label><input type="checkbox" id="optSkipPin" /> skip pinned</label>
+  </div>
+
+  <label>Action</label>
+  <div class="row">
+    <button id="btnScroll" class="btn-scroll" type="button">Auto-scroll</button>
+    <button id="btnGo" class="btn-go" type="button">Save photos</button>
+  </div>
+
+  <div id="status">Open an Instagram or Fresha page, then click <span class="gold">Save photos</span>.</div>
+
+  <p class="hint">
+    <b>Tip:</b> click <b>Auto-scroll</b> first to load more posts before saving. Each photo is downloaded with its original IG resolution and labeled by index.
+  </p>
+
+  <div class="footer">made for /Users/andytheng/Documents/blancabeautybar</div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
