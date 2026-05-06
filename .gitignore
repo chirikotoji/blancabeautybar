@@ -12,3 +12,4 @@ node_modules/
 # fal.ai working files
 .cache/
 tmp/
+.vercel
