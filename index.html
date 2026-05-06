@@ -1126,24 +1126,15 @@
         lastStep = sIdx;
       }
     }
-    // Drive via rAF while the track is on-screen — scroll events don't reach all contexts.
-    let rafId = null, isVisible = false;
+    // Drive every animation frame — guarantees update regardless of scroll/IO firing in
+    // headless or unusual contexts. Cheap because render() short-circuits when track
+    // isn't on screen (progress would clamp to 0 or 1 without DOM mutation if frame unchanged).
     function tick() {
       render();
-      if (isVisible) rafId = requestAnimationFrame(tick);
+      requestAnimationFrame(tick);
     }
-    const visObs = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          if (!isVisible) { isVisible = true; tick(); }
-        } else {
-          isVisible = false;
-          if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
-        }
-      });
-    }, { rootMargin: '100px 0px' });
-    visObs.observe(track);
-    // Also re-render on explicit events as a belt-and-braces measure.
+    requestAnimationFrame(tick);
+    // Belt-and-braces — cover edge cases where rAF is throttled (background tab → scroll back)
     window.addEventListener('scroll', render, { passive: true });
     window.addEventListener('resize', render);
     render();
