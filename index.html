@@ -218,35 +218,6 @@
 
   /* —— ALIVE LAYER ——————————————————————————————————————— */
 
-  /* Custom polish-drop cursor */
-  @media (hover: hover) and (pointer: fine) {
-    body.has-cursor { cursor: none; }
-    body.has-cursor a, body.has-cursor button, body.has-cursor [data-magnet] { cursor: none; }
-    .cursor-drop {
-      position: fixed; left: 0; top: 0; width: 18px; height: 18px;
-      border-radius: 50%; background: #E4B7B0;
-      pointer-events: none; z-index: 9999;
-      transform: translate(-50%, -50%);
-      transition: width .25s cubic-bezier(.2,.8,.2,1), height .25s cubic-bezier(.2,.8,.2,1),
-                  background .25s ease, opacity .25s ease;
-      mix-blend-mode: multiply; opacity: 0.95;
-      box-shadow: 0 6px 14px -4px rgba(228,183,176,.7), inset 0 -3px 6px rgba(15,14,12,.18), inset 0 3px 5px rgba(255,255,255,.55);
-    }
-    .cursor-drop.is-hover { width: 56px; height: 56px; background: #0F0E0C; mix-blend-mode: difference; opacity: .95; }
-    .cursor-drop.is-hover::after {
-      content: 'click'; position: absolute; inset: 0; display: grid; place-items: center;
-      color: #FAFAF7; font-size: 9px; letter-spacing: .18em; text-transform: uppercase; font-weight: 600;
-    }
-    .cursor-ring {
-      position: fixed; left: 0; top: 0; width: 38px; height: 38px;
-      border: 1px solid rgba(15,14,12,.35); border-radius: 50%;
-      pointer-events: none; z-index: 9998; transform: translate(-50%, -50%);
-      transition: width .2s ease, height .2s ease, opacity .2s ease, border-color .2s ease;
-      opacity: .65;
-    }
-    .cursor-ring.is-hover { width: 70px; height: 70px; border-color: rgba(228,183,176,.9); opacity: .85; }
-  }
-
   /* Marquee strip */
   .marquee {
     display: flex; overflow: hidden; gap: 3rem; align-items: center;
@@ -272,23 +243,6 @@
     will-change: transform;
   }
   .slot-track > span { line-height: 1; padding: 0 0.05em; }
-
-  /* Live status pill (the breathing dot) */
-  .live-pill {
-    display: inline-flex; align-items: center; gap: 8px;
-    padding: 6px 12px; border-radius: 999px;
-    background: #FAFAF7; border: 1px solid rgba(15,14,12,.12);
-    font-size: 11px; letter-spacing: .14em; text-transform: uppercase; font-weight: 600;
-    color: #0F0E0C;
-  }
-  .live-dot {
-    position: relative; width: 8px; height: 8px; border-radius: 50%; background: #C18B82;
-  }
-  .live-dot::before {
-    content: ''; position: absolute; inset: -3px; border-radius: 50%; background: rgba(193,139,130,.5);
-    animation: live-pulse 1.6s ease-out infinite;
-  }
-  @keyframes live-pulse { 0% { transform: scale(.6); opacity: 1; } 80%, 100% { transform: scale(2.4); opacity: 0; } }
 
   /* Award badge sparkle */
   .award { position: relative; overflow: hidden; }
@@ -476,7 +430,7 @@
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 1-5 4.7 1.3 7.3L12 18l-6.3 3.5L7 14.2 2 9.5l7-1z"/></svg>
             Best in Class 2026 · Fresha
           </span>
-          <span class="live-pill"><span class="live-dot"></span> <span id="liveStatus">By appointment · live availability on Fresha</span></span>
+          <span class="cap text-stone">By appointment · 392 Clarence Street</span>
         </div>
 
         <p class="cap text-stone reveal mb-3">Blanca Beauty · Everyday Luxury</p>
@@ -1293,32 +1247,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.0.42/dist/lenis.min.js"></script>
 <script>
-  // ALIVE LAYER — cursor, hero slot, magnetic buttons, live status
-
-  // Custom polish-drop cursor
-  (function () {
-    if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
-    const drop = document.createElement('div'); drop.className = 'cursor-drop'; document.body.appendChild(drop);
-    const ring = document.createElement('div'); ring.className = 'cursor-ring'; document.body.appendChild(ring);
-    document.body.classList.add('has-cursor');
-    let tx = innerWidth/2, ty = innerHeight/2, x = tx, y = ty, rx = tx, ry = ty;
-    document.addEventListener('mousemove', (e) => { tx = e.clientX; ty = e.clientY; }, { passive: true });
-    document.addEventListener('mouseleave', () => { drop.style.opacity = '0'; ring.style.opacity = '0'; }, { passive: true });
-    document.addEventListener('mouseenter', () => { drop.style.opacity = ''; ring.style.opacity = ''; }, { passive: true });
-    function loop() {
-      x += (tx - x) * 0.35; y += (ty - y) * 0.35;
-      rx += (tx - rx) * 0.18; ry += (ty - ry) * 0.18;
-      drop.style.transform = 'translate(' + x + 'px,' + y + 'px) translate(-50%,-50%)';
-      ring.style.transform = 'translate(' + rx + 'px,' + ry + 'px) translate(-50%,-50%)';
-      requestAnimationFrame(loop);
-    }
-    loop();
-    const hover = (on) => () => { drop.classList.toggle('is-hover', on); ring.classList.toggle('is-hover', on); };
-    document.querySelectorAll('a, button, [data-magnet], .gallery-card, .card, figure.photo').forEach(el => {
-      el.addEventListener('mouseenter', hover(true)); el.addEventListener('mouseleave', hover(false));
-    });
-  })();
-
   // Hero rotating-word slot machine
   (function () {
     const slot = document.getElementById('heroSlot');
@@ -1355,23 +1283,6 @@
     });
   })();
 
-  // Live status — small fake-real status that updates every minute
-  (function () {
-    const el = document.getElementById('liveStatus');
-    if (!el) return;
-    const lines = [
-      'By appointment · live availability on Fresha',
-      'Russian Manicure Specialists',
-      'Laser hair removal · every skin tone',
-      'Best in Class 2026 · Fresha',
-      'Open Wed–Sun · 392 Clarence Street',
-      '5.0 ★ · 1,014 reviews and counting'
-    ];
-    let i = 0;
-    function rotate() { el.textContent = lines[i % lines.length]; i++; }
-    rotate();
-    setInterval(rotate, 6500);
-  })();
 
   // Smooth scroll — optional, gracefully degrades if Lenis CDN fails
   let lenis = null;
