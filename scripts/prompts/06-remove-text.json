@@ -1,0 +1,9 @@
+{
+  "prompt": "Remove the text overlay that says 'Spring sets ♡' from the image. Keep everything else identical — the hand, the pink chrome glass nails, the lighting, the gray background. Just make the area where the text was look like clean smooth pink-chrome nail polish, matching the surrounding texture. Photographic, hyper-realistic, no other changes.",
+  "image_url": "https://blancabeautybar.vercel.app/media/client/spring-sets-original.jpg",
+  "guidance_scale": 3.5,
+  "num_inference_steps": 30,
+  "num_images": 1,
+  "safety_tolerance": "5",
+  "output_format": "jpeg"
+}
