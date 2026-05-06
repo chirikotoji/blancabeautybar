@@ -605,94 +605,107 @@
   </div>
 </section>
 
-<!-- THE METHOD — scroll-locked rotating-product reveal -->
-<section id="russian" class="relative bg-paper">
-  <div class="russian-scroll-track relative" style="height: 320vh;">
-    <div class="sticky top-0 h-screen overflow-hidden grid grid-cols-1 lg:grid-cols-2">
+<!-- THE METHOD — real Instagram reel + the three method pillars -->
+<section id="russian" class="relative bg-paper py-16 lg:py-24 overflow-hidden">
 
-      <!-- LEFT — rotating product (image-stack scrubber, frames swap on scroll) -->
-      <div class="relative h-full overflow-hidden bg-cream order-1">
-        <div id="russianRotation" class="absolute inset-0">
-          <img src="media/client/rotation-frames/f01.jpg" data-frame="0" alt="Rotating Russian E-File manicure" class="rfx is-active absolute inset-0 w-full h-full object-cover" loading="eager" fetchpriority="high"/>
-          <img src="media/client/rotation-frames/f02.jpg" data-frame="1" alt="" class="rfx absolute inset-0 w-full h-full object-cover" loading="eager"/>
-          <img src="media/client/rotation-frames/f03.jpg" data-frame="2" alt="" class="rfx absolute inset-0 w-full h-full object-cover" loading="eager"/>
-          <img src="media/client/rotation-frames/f04.jpg" data-frame="3" alt="" class="rfx absolute inset-0 w-full h-full object-cover" loading="eager"/>
-          <img src="media/client/rotation-frames/f05.jpg" data-frame="4" alt="" class="rfx absolute inset-0 w-full h-full object-cover" loading="eager"/>
-          <img src="media/client/rotation-frames/f06.jpg" data-frame="5" alt="" class="rfx absolute inset-0 w-full h-full object-cover" loading="eager"/>
-          <img src="media/client/rotation-frames/f07.jpg" data-frame="6" alt="" class="rfx absolute inset-0 w-full h-full object-cover" loading="eager"/>
-          <img src="media/client/rotation-frames/f08.jpg" data-frame="7" alt="" class="rfx absolute inset-0 w-full h-full object-cover" loading="eager"/>
-          <img src="media/client/rotation-frames/f09.jpg" data-frame="8" alt="" class="rfx absolute inset-0 w-full h-full object-cover" loading="eager"/>
-          <img src="media/client/rotation-frames/f10.jpg" data-frame="9" alt="" class="rfx absolute inset-0 w-full h-full object-cover" loading="eager"/>
-          <img src="media/client/rotation-frames/f11.jpg" data-frame="10" alt="" class="rfx absolute inset-0 w-full h-full object-cover" loading="eager"/>
-          <img src="media/client/rotation-frames/f12.jpg" data-frame="11" alt="" class="rfx absolute inset-0 w-full h-full object-cover" loading="eager"/>
-          <img src="media/client/rotation-frames/f13.jpg" data-frame="12" alt="" class="rfx absolute inset-0 w-full h-full object-cover" loading="eager"/>
-          <img src="media/client/rotation-frames/f14.jpg" data-frame="13" alt="" class="rfx absolute inset-0 w-full h-full object-cover" loading="eager"/>
-          <img src="media/client/rotation-frames/f15.jpg" data-frame="14" alt="" class="rfx absolute inset-0 w-full h-full object-cover" loading="eager"/>
-          <img src="media/client/rotation-frames/f16.jpg" data-frame="15" alt="" class="rfx absolute inset-0 w-full h-full object-cover" loading="eager"/>
-          <img src="media/client/rotation-frames/f17.jpg" data-frame="16" alt="" class="rfx absolute inset-0 w-full h-full object-cover" loading="eager"/>
-          <img src="media/client/rotation-frames/f18.jpg" data-frame="17" alt="" class="rfx absolute inset-0 w-full h-full object-cover" loading="eager"/>
-          <img src="media/client/rotation-frames/f19.jpg" data-frame="18" alt="" class="rfx absolute inset-0 w-full h-full object-cover" loading="eager"/>
-          <img src="media/client/rotation-frames/f20.jpg" data-frame="19" alt="" class="rfx absolute inset-0 w-full h-full object-cover" loading="eager"/>
+  <!-- Decorative drift drops -->
+  <div aria-hidden="true" class="hidden lg:block absolute left-10 top-24 polish-drop drift-slow" style="width:46px;height:46px;animation-delay:-4s;opacity:.7;"></div>
+  <div aria-hidden="true" class="hidden lg:block absolute right-12 bottom-32 drift-fast" style="opacity:.6;animation-delay:-2s;">
+    <svg width="38" height="38" viewBox="0 0 24 24" fill="#B89248" class="sparkle"><path d="M12 2 L13.5 9 L20 10 L13.5 11.5 L12 18 L10.5 11.5 L4 10 L10.5 9 Z"/></svg>
+  </div>
+
+  <div class="max-w-[1340px] mx-auto px-5 lg:px-10">
+
+    <!-- Section intro -->
+    <div class="mb-12 lg:mb-16">
+      <p class="cap text-stone reveal flex items-center gap-3">The Russian Method</p>
+      <h2 class="display text-ink mt-4 reveal max-w-4xl" style="font-size: clamp(40px, 6.4vw, 92px);">
+        Three steps. <span class="ital text-gold">Three weeks of wear.</span><br/>One <span class="marker">obsessive</span> studio.
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-12 gap-6 lg:gap-12 items-stretch">
+
+      <!-- LEFT — real IG reel autoplaying -->
+      <div class="col-span-12 lg:col-span-5 reveal">
+        <div class="relative rounded-2xl overflow-hidden bg-cream aspect-[9/16] mx-auto" style="max-width: 420px; box-shadow: 0 28px 70px -28px rgba(15,14,12,.45);">
+          <video
+            id="russianReel"
+            muted playsinline preload="metadata" autoplay loop
+            poster="media/client/ig-french-tip-poster.jpg"
+            src="media/client/ig-french-tip-web.mp4"
+            class="absolute inset-0 w-full h-full object-cover"
+            aria-label="A Blanca Russian E-File manicure — white french tip with gold-glitter detail"></video>
+
+          <!-- IG-style top label -->
+          <div class="absolute top-4 left-4 right-4 z-10 flex items-center gap-2">
+            <img src="media/blanca/blanca-logo.jpg" alt="" class="h-7 w-7 rounded-full ring-1 ring-white/30 object-cover"/>
+            <span class="text-paper text-[12px] font-medium tracking-wide drop-shadow">@blancabeautybar</span>
+          </div>
+
+          <!-- Mute / sound toggle -->
+          <button id="reelMute" type="button" aria-label="Toggle sound" class="absolute right-4 bottom-4 z-10 w-9 h-9 rounded-full bg-ink/55 backdrop-blur-md text-paper grid place-items-center hover:bg-ink/80 transition">
+            <svg id="reelMuteIcon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M3 10v4h4l5 5V5L7 10H3zm13.59-4.59L18 4l3 3-3 3 1.41 1.41L20 10l3 3-3 3-1.41-1.41L18 13l-3 3 3-3 1.41-1.41L18 12l-1.41-1.41z"/></svg>
+          </button>
+
+          <!-- Award badge over reel -->
+          <div class="absolute left-4 bottom-4 z-10 award">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 1-5 4.7 1.3 7.3L12 18l-6.3 3.5L7 14.2 2 9.5l7-1z"/></svg>
+            Best in Class 2026
+          </div>
         </div>
 
-        <div class="absolute left-5 top-5 z-10 award">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 1-5 4.7 1.3 7.3L12 18l-6.3 3.5L7 14.2 2 9.5l7-1z"/></svg>
-          Best in Class 2026 · Fresha
-        </div>
-
-        <div class="absolute right-5 bottom-5 z-10 scroll-hint">
-          The Russian Method · scroll
-        </div>
+        <p class="cap text-stone text-center mt-5">A real set, by Blanca · @blancabeautybar</p>
       </div>
 
-      <!-- RIGHT — story panel: 3 steps locked to scroll progress -->
-      <div class="relative h-full bg-paperwarm order-2 overflow-hidden">
+      <!-- RIGHT — the three method pillars -->
+      <div class="col-span-12 lg:col-span-7 flex flex-col justify-between gap-8">
 
-        <div class="absolute left-8 lg:left-16 top-10 lg:top-14 right-8 z-10 flex items-center justify-between gap-4">
-          <p class="cap text-stone">The Russian E-File · 60 min</p>
-          <p class="cap text-ink">$85</p>
+        <div class="space-y-7 stag">
+          <div class="flex items-baseline gap-6 border-t border-ink/10 pt-6">
+            <span class="font-serif italic text-gold text-3xl flex-shrink-0 leading-none">01</span>
+            <div>
+              <h3 class="display text-ink leading-tight" style="font-size: clamp(28px, 3.4vw, 44px);">
+                We <span class="ital">file</span>. We don't <span class="strike">soak</span>.
+              </h3>
+              <p class="text-ink/70 text-lg mt-3 max-w-2xl leading-snug">
+                Most studios bathe your nails before painting them — that's why polish lifts on day seven. We work dry. The cuticle stays sealed.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-baseline gap-6 border-t border-ink/10 pt-6">
+            <span class="font-serif italic text-gold text-3xl flex-shrink-0 leading-none">02</span>
+            <div>
+              <h3 class="display text-ink leading-tight" style="font-size: clamp(28px, 3.4vw, 44px);">
+                We <span class="ital">build</span>. An apex on every nail.
+              </h3>
+              <p class="text-ink/70 text-lg mt-3 max-w-2xl leading-snug">
+                A featherweight gel sculpts a structural arch on each nail — the reason your tips don't peel at the gym, in dishwater, on a flight to Mexico.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-baseline gap-6 border-t border-ink/10 pt-6">
+            <span class="font-serif italic text-gold text-3xl flex-shrink-0 leading-none">03</span>
+            <div>
+              <h3 class="display text-ink leading-tight" style="font-size: clamp(28px, 3.4vw, 44px);">
+                We <span class="ital">finish</span>. Mirror, every time.
+              </h3>
+              <p class="text-ink/70 text-lg mt-3 max-w-2xl leading-snug">
+                Two coats of color, cured under medical LED. A topcoat that won't yellow in the sun, won't dull from dishwater, won't chip on day twenty.
+              </p>
+            </div>
+          </div>
         </div>
 
-        <div class="absolute inset-0 flex items-center px-8 lg:px-16">
-
-          <div class="rsn-step rsn-1 active">
-            <p class="font-serif italic text-gold text-2xl">01</p>
-            <h3 class="display text-ink mt-3" style="font-size: clamp(40px, 5.2vw, 80px);">
-              We <span class="ital">file.</span><br/>We don't <span class="strike">soak</span>.
-            </h3>
-            <p class="text-ink/70 text-lg lg:text-xl mt-7 max-w-md leading-snug">
-              Most studios bathe your nails before painting them — that's why polish lifts on day seven. We work <span class="underline-mark">dry</span>. The cuticle stays sealed.
-            </p>
-          </div>
-
-          <div class="rsn-step rsn-2">
-            <p class="font-serif italic text-gold text-2xl">02</p>
-            <h3 class="display text-ink mt-3" style="font-size: clamp(40px, 5.2vw, 80px);">
-              We <span class="ital">build.</span><br/>An apex on every nail.
-            </h3>
-            <p class="text-ink/70 text-lg lg:text-xl mt-7 max-w-md leading-snug">
-              A featherweight gel sculpts a structural arch on each nail — the reason your tips don't peel at the gym, in dishwater, on a flight to Mexico.
-            </p>
-          </div>
-
-          <div class="rsn-step rsn-3">
-            <p class="font-serif italic text-gold text-2xl">03</p>
-            <h3 class="display text-ink mt-3" style="font-size: clamp(40px, 5.2vw, 80px);">
-              We <span class="ital">finish.</span><br/>Mirror, every time.
-            </h3>
-            <p class="text-ink/70 text-lg lg:text-xl mt-7 max-w-md leading-snug">
-              Two coats of color, cured under medical LED. A topcoat that won't yellow in the sun, won't dull from dishwater, won't chip on day twenty.
-            </p>
-          </div>
-
-        </div>
-
-        <div class="absolute left-8 lg:left-16 bottom-10 lg:bottom-14 right-8 z-10 flex items-end justify-between gap-4 flex-wrap">
+        <!-- CTA row -->
+        <div class="border-t border-ink/15 pt-6 flex items-end justify-between gap-4 flex-wrap reveal">
           <div>
-            <p class="cap text-stone">Three weeks. No chips.</p>
-            <p class="font-serif text-2xl lg:text-3xl text-ink mt-1 leading-tight ital">Booked weeks out — pick yours.</p>
+            <p class="cap text-stone">The Russian E-File Manicure · 60 min</p>
+            <p class="font-serif text-3xl lg:text-4xl text-ink mt-1 leading-none">$85</p>
           </div>
-          <a href="https://www.fresha.com/a/blanca-beauty-bar-london-392-clarence-street-zkvszbqf" target="_blank" rel="noopener" class="btn">
+          <a href="https://www.fresha.com/a/blanca-beauty-bar-london-392-clarence-street-zkvszbqf" target="_blank" rel="noopener" class="btn" data-magnet>
             Book the Russian <span class="arr">↗</span>
           </a>
         </div>
@@ -1394,45 +1407,18 @@
     });
   });
 
-  // SCROLL-LOCKED RUSSIAN METHOD — frame scrubber + step transitions
+  // RUSSIAN METHOD reel — mute / unmute toggle. Reel autoplays muted by default.
   (function () {
-    const sec = document.getElementById('russian');
-    if (!sec) return;
-    const track = sec.querySelector('.russian-scroll-track');
-    const frames = sec.querySelectorAll('.rfx');
-    const steps = sec.querySelectorAll('.rsn-step');
-    if (!track || !frames.length || !steps.length) return;
-    let lastFrame = 0, lastStep = 0;
-    function render() {
-      const rect = track.getBoundingClientRect();
-      const total = track.offsetHeight - window.innerHeight;
-      if (total <= 0) return;
-      const progress = Math.max(0, Math.min(1, -rect.top / total));
-      const fIdx = Math.min(frames.length - 1, Math.floor(progress * (frames.length - 0.001)));
-      if (fIdx !== lastFrame) {
-        frames[lastFrame].classList.remove('is-active');
-        frames[fIdx].classList.add('is-active');
-        lastFrame = fIdx;
-      }
-      const sIdx = Math.min(steps.length - 1, Math.floor(progress * (steps.length - 0.001)));
-      if (sIdx !== lastStep) {
-        steps[lastStep].classList.remove('active');
-        steps[sIdx].classList.add('active');
-        lastStep = sIdx;
-      }
-    }
-    // Drive every animation frame — guarantees update regardless of scroll/IO firing in
-    // headless or unusual contexts. Cheap because render() short-circuits when track
-    // isn't on screen (progress would clamp to 0 or 1 without DOM mutation if frame unchanged).
-    function tick() {
-      render();
-      requestAnimationFrame(tick);
-    }
-    requestAnimationFrame(tick);
-    // Belt-and-braces — cover edge cases where rAF is throttled (background tab → scroll back)
-    window.addEventListener('scroll', render, { passive: true });
-    window.addEventListener('resize', render);
-    render();
+    const v = document.getElementById('russianReel');
+    const btn = document.getElementById('reelMute');
+    const icon = document.getElementById('reelMuteIcon');
+    if (!v || !btn) return;
+    const ICON_MUTED = '<path d="M3 10v4h4l5 5V5L7 10H3zm13.59-4.59L18 4l3 3-3 3 1.41 1.41L20 10l3 3-3 3-1.41-1.41L18 13l-3 3 3-3 1.41-1.41L18 12l-1.41-1.41z"/>';
+    const ICON_LOUD = '<path d="M3 10v4h4l5 5V5L7 10H3zm13 2a4 4 0 0 0-2-3.46v6.92A4 4 0 0 0 16 12zm-2-7v2.18a6 6 0 0 1 0 9.64V19a8 8 0 0 0 0-14z"/>';
+    btn.addEventListener('click', () => {
+      v.muted = !v.muted;
+      icon.innerHTML = v.muted ? ICON_MUTED : ICON_LOUD;
+    });
   })();
 
   // Reveal-on-scroll. Hide elements only after JS confirms it's running, then animate in via observer.
