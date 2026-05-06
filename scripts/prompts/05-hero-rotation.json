@@ -1,0 +1,7 @@
+{
+  "image_url": "https://blancabeautybar.vercel.app/media/client/nail-navy-french.jpg",
+  "prompt": "Slow elegant cinematic rotation of the hand, gracefully turning to show the glass-glossy navy french-tip Russian manicure from multiple angles, soft champagne studio light catching the high-shine gel finish, the rotation reveals the apex and the clean cuticle line, cream linen backdrop, hyperrealistic luxury beauty editorial, slow motion product shot, no text overlays, no graphics, no zoom-in cuts, no camera shake, smooth continuous motion",
+  "duration": "5",
+  "aspect_ratio": "9:16",
+  "negative_prompt": "text, watermark, logo, distorted fingers, extra fingers, deformed hand, blurry, low quality, jittery, fast cuts, zoom, shaking"
+}
