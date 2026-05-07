@@ -499,12 +499,41 @@
   <span>→</span>
 </a>
 
-<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.40/bundled/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.0.42/dist/lenis.min.js"></script>
 <script>
-  // Lenis smooth scroll
-  const lenis = new Lenis({ duration: 1.1, easing: (t) => 1 - Math.pow(1 - t, 3) });
-  function raf(t) { lenis.raf(t); requestAnimationFrame(raf); }
-  requestAnimationFrame(raf);
+  // Reveal on scroll — set up FIRST so it runs even if anything below errors
+  (function () {
+    try {
+      const els = document.querySelectorAll('.rev.pre');
+      if (!('IntersectionObserver' in window)) {
+        els.forEach(el => el.classList.add('is-in'));
+        return;
+      }
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(en => {
+          if (en.isIntersecting) {
+            en.target.classList.add('is-in');
+            io.unobserve(en.target);
+          }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -5% 0px' });
+      els.forEach(el => io.observe(el));
+      // Failsafe: anything still hidden after 1.5s — show it
+      setTimeout(() => document.querySelectorAll('.rev.pre:not(.is-in)').forEach(el => el.classList.add('is-in')), 1500);
+    } catch (e) {
+      document.querySelectorAll('.rev.pre').forEach(el => el.classList.add('is-in'));
+    }
+  })();
+
+  // Lenis smooth scroll (optional polish — must not break the page if it fails)
+  (function () {
+    try {
+      if (typeof Lenis === 'undefined') return;
+      const lenis = new Lenis({ duration: 1.0, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smoothWheel: true, smoothTouch: false });
+      const raf = t => { lenis.raf(t); requestAnimationFrame(raf); };
+      requestAnimationFrame(raf);
+    } catch (e) {}
+  })();
 
   // Mobile menu toggle
   (function () {
@@ -523,17 +552,6 @@
     mm.querySelectorAll('a').forEach(a => a.addEventListener('click', () => set(false)));
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') set(false); });
   })();
-
-  // Reveal on scroll
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(en => {
-      if (en.isIntersecting) {
-        en.target.classList.add('is-in');
-        io.unobserve(en.target);
-      }
-    });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.rev.pre').forEach(el => io.observe(el));
 
   // Reviews carousel
   (function () {
