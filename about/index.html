@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>About · Blanca Beauty Bar</title>
+<meta name="description" content="Founded by Buthyna Abu-Deyah in 2019. A Russian e-file manicure studio at 392 Clarence Street, London Ontario." />
+<meta name="theme-color" content="#EFE7D6" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Anton&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { theme: { extend: {
+    fontFamily: { display: ['Italiana','serif'], serif: ['"Cormorant Garamond"','Georgia','serif'], cond: ['Anton','Impact','sans-serif'], hand: ['Caveat','cursive'] },
+    colors: { paper:'#EFE7D6', paperdk:'#E5DBC4', ink:'#161512', ox:'#6B2027', oxdk:'#4A1418', dust:'#8E7E5F' }
+  }}};
+</script>
+<style>
+  :root { color-scheme: light; }
+  html, body { background: #EFE7D6; color: #161512; }
+  body { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; -webkit-font-smoothing: antialiased; overflow-x: hidden; font-size: 17px; line-height: 1.55; }
+  ::selection { background: #6B2027; color: #EFE7D6; }
+  .display { font-family: 'Italiana', serif; font-weight: 400; line-height: 0.92; letter-spacing: -0.005em; }
+  .serif { font-family: 'Cormorant Garamond', Georgia, serif; }
+  .cond { font-family: 'Anton', Impact, sans-serif; letter-spacing: 0.04em; }
+  .hand { font-family: 'Caveat', cursive; }
+  .smcaps { font-family: 'Anton', Impact, sans-serif; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 400; font-size: 12px; }
+  .dropcap::first-letter { font-family: 'Italiana', serif; font-style: normal; font-size: 5.6em; line-height: 0.86; float: left; margin: 0.05em 0.12em -0.04em -0.04em; color: #6B2027; font-weight: 400; }
+  .btn { display: inline-flex; align-items: center; gap: 0.6rem; background: #161512; color: #EFE7D6; padding: 14px 28px; font-family: 'Anton', sans-serif; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 400; border: 1.5px solid #161512; transition: all .25s ease; }
+  .btn:hover { background: #6B2027; border-color: #6B2027; }
+  .btn-out { display: inline-flex; align-items: center; gap: 0.6rem; background: transparent; color: #161512; padding: 13px 28px; font-family: 'Anton', sans-serif; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 400; border: 1.5px solid #161512; transition: all .25s ease; }
+  .btn-out:hover { background: #161512; color: #EFE7D6; }
+  .mobile-book { position: fixed; bottom: 0; left: 0; right: 0; z-index: 50; background: #161512; color: #EFE7D6; padding: 16px 20px; font-family: 'Anton', sans-serif; font-size: 13px; letter-spacing: 0.24em; text-transform: uppercase; text-align: center; display: flex; align-items: center; justify-content: space-between; border-top: 1.5px solid #6B2027; }
+  @media (min-width: 768px) { .mobile-book { display: none; } }
+  .running-rule { border-top: 1.5px solid #161512; border-bottom: 1.5px solid #161512; }
+  .ed-photo { overflow: hidden; background: #E5DBC4; }
+  .numeral { font-family: 'Italiana', serif; font-weight: 400; line-height: 0.82; color: #6B2027; letter-spacing: -0.04em; }
+  .h-link { transition: color .2s ease; }
+  .h-link:hover { color: #6B2027; }
+  .h-link.active { color: #6B2027; }
+  .rev { opacity: 1; transition: opacity .9s ease, transform .9s ease; }
+  .rev.pre { opacity: 0; transform: translateY(12px); }
+  .rev.pre.is-in { opacity: 1; transform: none; }
+</style>
+</head>
+<body>
+
+<div class="running-rule bg-paper">
+  <div class="max-w-[1500px] mx-auto px-5 lg:px-10 py-2 flex items-center justify-between gap-6 smcaps text-ink/75">
+    <span>№ VII · 2026</span>
+    <span class="hidden md:inline">London, Ontario</span>
+    <span><a href="tel:+15196302272" class="h-link" data-track="phone_click">(519) 630-2272</a></span>
+  </div>
+</div>
+
+<header class="sticky top-0 z-40 bg-paper" style="border-bottom: 1.5px solid #161512;">
+  <div class="max-w-[1500px] mx-auto px-5 lg:px-10 h-[68px] flex items-center justify-between gap-6">
+    <a href="/" class="flex items-baseline gap-2.5">
+      <span class="display text-[28px] lg:text-[32px] text-ink leading-none">Blanca</span>
+      <span class="hand text-ox text-[20px] lg:text-[22px] leading-none" style="margin-left: -0.15em;">Beauty Bar</span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-9">
+      <a href="/about/" class="smcaps h-link active">About</a>
+      <a href="/services/russian-manicure/" class="smcaps text-ink h-link">Manicure</a>
+      <a href="/services/laser/" class="smcaps text-ink h-link">Laser</a>
+      <a href="/services/lash-brow/" class="smcaps text-ink h-link">Lash &amp; Brow</a>
+      <a href="/lookbook/" class="smcaps text-ink h-link">Lookbook</a>
+      <a href="/visit/" class="smcaps text-ink h-link">Visit</a>
+    </nav>
+    <a href="https://www.fresha.com/a/blanca-beauty-bar-london-392-clarence-street-zkvszbqf" target="_blank" rel="noopener" class="btn" data-track="book_click" data-track-loc="header">Book →</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="bg-paper">
+  <div class="max-w-[1500px] mx-auto px-5 lg:px-10 pt-12 lg:pt-20 pb-12 lg:pb-16">
+
+    <div class="grid grid-cols-12 gap-4 mb-12 lg:mb-16 smcaps text-ink/65">
+      <div class="col-span-6 lg:col-span-3">№ 01</div>
+      <div class="hidden lg:block col-span-6">A note from the founder</div>
+      <div class="col-span-6 lg:col-span-3 text-right">Page 7</div>
+    </div>
+
+    <h1 class="display text-ink rev pre" style="font-size: clamp(80px, 14vw, 240px);">
+      <span class="block">A note,</span>
+      <span class="block text-ox" style="font-style: italic; margin-left: 0.16em;">from the chair.</span>
+    </h1>
+
+    <p class="serif text-xl lg:text-2xl text-ink/75 mt-12 lg:mt-16 max-w-2xl rev pre">
+      Blanca Beauty was founded in 2019 by Buthyna Abu-Deyah. The studio is at 392 Clarence Street in Citi Plaza, downtown London Ontario.
+    </p>
+
+  </div>
+
+  <div class="ed-photo aspect-[16/8] lg:aspect-[16/7]">
+    <img src="media/brand/buthyna-founder.jpg" alt="Buthyna Abu-Deyah" class="w-full h-full object-cover" style="object-position: center 30%;" loading="eager"/>
+  </div>
+</section>
+
+<!-- THE LETTER -->
+<section class="bg-paper py-24 lg:py-36">
+  <div class="max-w-[1500px] mx-auto px-5 lg:px-10">
+
+    <div class="grid grid-cols-12 gap-8 lg:gap-16 items-start">
+
+      <div class="col-span-12 lg:col-span-4 rev pre">
+        <p class="smcaps text-ox mb-4">The Founder</p>
+        <p class="display text-ink leading-[0.95] mb-6" style="font-size: clamp(36px, 4vw, 56px);">
+          Buthyna<br/>Abu-Deyah
+        </p>
+        <p class="serif italic text-ink/70 text-lg">Founder &amp; Beauty Therapist</p>
+        <p class="serif text-ink/65 text-base mt-3 leading-relaxed">
+          Trained in the Russian e-file method. Seven years on Clarence Street.
+        </p>
+
+        <p class="hand text-ox mt-10" style="font-size: clamp(48px, 5vw, 72px); transform: rotate(-3deg); line-height: 1; font-weight: 700;">
+          Buthyna xo
+        </p>
+      </div>
+
+      <div class="col-span-12 lg:col-span-8 rev pre">
+
+        <p class="serif text-xl lg:text-2xl text-ink leading-[1.5] dropcap">
+          Blanca Beauty was founded with a singular aim: to elevate the nail salon experience. Every detail has been refined from beginning to end, so each appointment delivers a finish you can trust.
+        </p>
+
+        <p class="serif text-lg lg:text-xl text-ink/80 leading-[1.55] mt-6">
+          Seven years in. Same standard. Same chair on Clarence Street. Maryam and I have trained in the Russian e-file method since 2019, and the studio is built around that craft. The work that leaves this room is meant to last four to five weeks. That's the only thing we sell.
+        </p>
+
+        <p class="serif text-lg lg:text-xl text-ink/80 leading-[1.55] mt-6">
+          Beyond manicure work, we offer diode laser hair removal that's safe for every skin type, Yumi Keratin lash lifts that hold for eight to twelve weeks, and brow lamination mapped to your features. Every reusable tool we use is autoclave-sterilized between clients, the same standard used for surgical instruments.
+        </p>
+
+        <p class="serif text-lg lg:text-xl text-ink/80 leading-[1.55] mt-6">
+          The studio is woman-owned and openly LGBTQ+ friendly. Open Wednesday through Sunday, by appointment only. We hope to see you on Clarence Street.
+        </p>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- THE TEAM -->
+<section class="bg-paperdk py-24 lg:py-36">
+  <div class="max-w-[1500px] mx-auto px-5 lg:px-10">
+
+    <div class="grid grid-cols-12 gap-4 running-rule py-3 mb-12 lg:mb-16 smcaps">
+      <div class="col-span-6 lg:col-span-3">№ 02</div>
+      <div class="hidden lg:block col-span-6">The team</div>
+      <div class="col-span-6 lg:col-span-3 text-right">Page 9</div>
+    </div>
+
+    <h2 class="display text-ink mb-12 lg:mb-16 rev pre" style="font-size: clamp(64px, 9vw, 160px);">
+      Two <span class="italic text-ox">therapists.</span>
+    </h2>
+
+    <div class="grid grid-cols-12 gap-8 lg:gap-12">
+
+      <article class="col-span-12 md:col-span-6 rev pre">
+        <figure class="ed-photo aspect-[4/5] mb-6">
+          <img src="media/brand/buthyna-founder.jpg" alt="Buthyna Abu-Deyah" class="w-full h-full object-cover"/>
+        </figure>
+        <p class="display text-3xl lg:text-4xl text-ink mb-2">Buthyna Abu-Deyah</p>
+        <p class="smcaps text-ox mb-3">Founder · Beauty Therapist</p>
+        <p class="serif text-ink/80 text-lg leading-relaxed">
+          Trained specifically in the Russian e-file method. Seven years on Clarence Street. Specialties: Russian manicure, laser hair removal, lash lift.
+        </p>
+      </article>
+
+      <article class="col-span-12 md:col-span-6 rev pre">
+        <figure class="ed-photo aspect-[4/5] mb-6">
+          <img src="media/brand/maryam-portrait.jpg" alt="Maryam, Beauty Therapist" class="w-full h-full object-cover"/>
+        </figure>
+        <p class="display text-3xl lg:text-4xl text-ink mb-2">Maryam</p>
+        <p class="smcaps text-ox mb-3">Beauty Therapist</p>
+        <p class="serif text-ink/80 text-lg leading-relaxed">
+          Same precise manicure, same calm appointments. Specialties: Russian manicure, brow shaping, lash lift.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section class="bg-paper py-24 lg:py-36">
+  <div class="max-w-[1500px] mx-auto px-5 lg:px-10">
+
+    <div class="grid grid-cols-12 gap-4 running-rule py-3 mb-12 lg:mb-16 smcaps">
+      <div class="col-span-6 lg:col-span-3">№ 03</div>
+      <div class="hidden lg:block col-span-6">How we work</div>
+      <div class="col-span-6 lg:col-span-3 text-right">Page 11</div>
+    </div>
+
+    <div class="grid grid-cols-12 gap-8 lg:gap-16">
+
+      <div class="col-span-12 lg:col-span-5 rev pre">
+        <h2 class="display text-ink leading-[0.95]" style="font-size: clamp(56px, 7vw, 112px);">
+          Considered,<br/><span class="italic text-ox">not constant.</span>
+        </h2>
+      </div>
+
+      <div class="col-span-12 lg:col-span-7 rev pre space-y-8">
+
+        <div>
+          <p class="numeral text-3xl mb-2">i.</p>
+          <p class="display text-2xl lg:text-3xl text-ink mb-2">Technique-led.</p>
+          <p class="serif text-lg text-ink/80 leading-relaxed">
+            Russian e-file manicure. Diode laser hair removal. Yumi keratin lash lifts. The menu is short on purpose. We do what we know we do exceptionally well.
+          </p>
+        </div>
+
+        <div>
+          <p class="numeral text-3xl mb-2">ii.</p>
+          <p class="display text-2xl lg:text-3xl text-ink mb-2">Calm, never rushed.</p>
+          <p class="serif text-lg text-ink/80 leading-relaxed">
+            Single appointments, no overlapping schedules. The room is designed to feel quiet on purpose. A drink on arrival. Time to relax.
+          </p>
+        </div>
+
+        <div>
+          <p class="numeral text-3xl mb-2">iii.</p>
+          <p class="display text-2xl lg:text-3xl text-ink mb-2">Hygiene as baseline.</p>
+          <p class="serif text-lg text-ink/80 leading-relaxed">
+            Every reusable tool autoclave-sterilized between clients. Single-use abrasives disposed of after each appointment. Hospital standard. Not a feature, a baseline.
+          </p>
+        </div>
+
+        <div>
+          <p class="numeral text-3xl mb-2">iv.</p>
+          <p class="display text-2xl lg:text-3xl text-ink mb-2">For everyone.</p>
+          <p class="serif text-lg text-ink/80 leading-relaxed">
+            Woman-owned. Openly LGBTQ+ friendly. Diode laser that works safely on every Fitzpatrick skin type. The studio is for everyone who walks through the door.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- INDEX / NUMBERS -->
+<section class="bg-paper py-12 lg:py-16 running-rule">
+  <div class="max-w-[1500px] mx-auto px-5 lg:px-10">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-6">
+      <div><p class="numeral" style="font-size: clamp(64px, 7vw, 110px);">5.0</p><p class="smcaps text-ink/65 mt-2">Average rating</p></div>
+      <div><p class="numeral" style="font-size: clamp(64px, 7vw, 110px);">1,014</p><p class="smcaps text-ink/65 mt-2">Five-star reviews</p></div>
+      <div><p class="numeral" style="font-size: clamp(64px, 7vw, 110px);">7+ <span class="text-[0.4em]">yr</span></p><p class="smcaps text-ink/65 mt-2">On Clarence Street</p></div>
+      <div><p class="numeral" style="font-size: clamp(64px, 7vw, 110px);">250+</p><p class="smcaps text-ink/65 mt-2">Gel colours</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="bg-paper py-24 lg:py-32 text-center">
+  <div class="max-w-[1100px] mx-auto px-5 lg:px-10">
+    <p class="smcaps text-ox mb-4">Come in</p>
+    <h2 class="display text-ink mb-10" style="font-size: clamp(56px, 8vw, 128px);">
+      See for <span class="italic text-ox">yourself.</span>
+    </h2>
+    <a href="https://www.fresha.com/a/blanca-beauty-bar-london-392-clarence-street-zkvszbqf" target="_blank" rel="noopener" class="btn" data-track="book_click" data-track-loc="about-cta">
+      Book on Fresha →
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-ink text-paper">
+  <div class="max-w-[1500px] mx-auto px-5 lg:px-10 py-16 lg:py-24">
+    <div class="grid grid-cols-12 gap-4 py-3 mb-10 lg:mb-14 smcaps text-paper/55" style="border-top: 1.5px solid rgba(239,231,214,.2); border-bottom: 1.5px solid rgba(239,231,214,.2);">
+      <div class="col-span-6 lg:col-span-3">Colophon</div>
+      <div class="hidden lg:block col-span-6">Issue No. VII · 2026</div>
+      <div class="col-span-6 lg:col-span-3 text-right">© Blanca Beauty Bar</div>
+    </div>
+    <div class="grid grid-cols-12 gap-8 lg:gap-12 mb-12 lg:mb-16">
+      <div class="col-span-12 lg:col-span-5">
+        <p class="display text-5xl lg:text-7xl leading-none">Blanca</p>
+        <p class="hand text-3xl lg:text-4xl mt-1" style="color:#E8C97A; font-weight:700;">Beauty Bar</p>
+        <p class="smcaps text-paper/45 mt-6">Russian Manicure · Diode Laser · Lash &amp; Brow</p>
+      </div>
+      <div class="col-span-6 lg:col-span-3">
+        <p class="smcaps text-paper/45 mb-3">Studio</p>
+        <p class="serif text-base text-paper/85 leading-relaxed">392 Clarence Street<br/>Citi Plaza<br/>London Ontario N6A 3M6<br/><a href="tel:+15196302272" class="h-link" style="color:#E8C97A;">(519) 630-2272</a></p>
+      </div>
+      <div class="col-span-6 lg:col-span-2">
+        <p class="smcaps text-paper/45 mb-3">Hours</p>
+        <p class="serif text-base text-paper/85 leading-relaxed">Wed–Fri 10–6:30<br/>Sat–Sun 10–5<br/><span class="text-paper/45 italic">Mon–Tue closed</span></p>
+      </div>
+      <div class="col-span-12 lg:col-span-2">
+        <p class="smcaps text-paper/45 mb-3">Pages</p>
+        <p class="serif text-base text-paper/85 leading-relaxed">
+          <a class="h-link block" href="/about/">About</a>
+          <a class="h-link block" href="/services/russian-manicure/">Manicure</a>
+          <a class="h-link block" href="/services/laser/">Laser</a>
+          <a class="h-link block" href="/services/lash-brow/">Lash &amp; Brow</a>
+          <a class="h-link block" href="/lookbook/">Lookbook</a>
+          <a class="h-link block" href="/visit/">Visit</a>
+        </p>
+      </div>
+    </div>
+    <div class="pt-6 flex flex-col md:flex-row justify-between gap-3 smcaps text-paper/45" style="border-top: 1.5px solid rgba(239,231,214,.2);">
+      <p>© 2026 Blanca Beauty Bar. Woman-owned · LGBTQ+ friendly · Made in London ON.</p>
+      <p>All bookings via Fresha</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://www.fresha.com/a/blanca-beauty-bar-london-392-clarence-street-zkvszbqf" target="_blank" rel="noopener" class="mobile-book" data-track="book_click" data-track-loc="mobile-sticky"><span>Book on Fresha</span><span>→</span></a>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.0.42/dist/lenis.min.js"></script>
+<script>
+  document.addEventListener('click', (e) => {
+    const a = e.target?.closest?.('a[href]'); if (!a) return;
+    const href = a.getAttribute('href') || '';
+    const isBook = href.includes('fresha.com') || a.dataset.track === 'book_click';
+    if (!isBook) return;
+    const loc = a.dataset.trackLoc || a.closest('section')?.id || 'unknown';
+    try { if (typeof gtag === 'function') gtag('event', 'book_click', { location: loc, link_url: href }); } catch (_) {}
+    try { if (typeof fbq === 'function') fbq('track', 'InitiateCheckout', { content_name: 'fresha_booking', source: loc }); } catch (_) {}
+    try { (window.dataLayer = window.dataLayer || []).push({ event:'book_click', location: loc, href }); } catch (_) {}
+  }, { capture: true });
+  let lenis = null;
+  try { if (typeof Lenis !== 'undefined') { lenis = new Lenis({ duration: 1.0, easing: t => Math.min(1, 1.001 - Math.pow(2, -10*t)), smoothWheel: true, smoothTouch: false }); const raf = t => { lenis.raf(t); requestAnimationFrame(raf); }; requestAnimationFrame(raf); } } catch (e) {}
+  const targets = document.querySelectorAll('.rev.pre');
+  const io = new IntersectionObserver(es => { es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } }); }, { threshold: 0.06, rootMargin: '0px 0px -6% 0px' });
+  targets.forEach(el => io.observe(el));
+  setTimeout(() => { document.querySelectorAll('.rev.pre').forEach(el => el.classList.add('is-in')); }, 1400);
+</script>
+
+</body>
+</html>
