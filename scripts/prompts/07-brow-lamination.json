@@ -1,0 +1,11 @@
+{
+  "prompt": "Editorial close-up of a single perfectly laminated brow on a woman's face, beauty studio aesthetic. Brow hairs are brushed upward and set in place, fully visible, fluffy, well-defined arch, natural medium-brown color, clean skin around the brow, soft daylight, neutral cream-and-warm-grey backdrop, hyperrealistic skin texture, shallow depth of field with focus on the brow itself, magazine beauty editorial composition, no text, no logos, no watermarks, no makeup heavy on lips or eyelids, just the brow as the hero, calm muted palette matching a luxury minimalist nail studio interior",
+  "negative_prompt": "extensions, falsies, fake lashes, glamour makeup, heavy eyeshadow, dramatic eye makeup, text, watermark, logo, blurry, distorted, low quality, cartoon, illustration, painted look",
+  "guidance_scale": 4,
+  "num_inference_steps": 35,
+  "num_images": 1,
+  "aspect_ratio": "1:1",
+  "safety_tolerance": "5",
+  "output_format": "jpeg",
+  "raw": false
+}
