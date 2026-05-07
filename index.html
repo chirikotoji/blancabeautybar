@@ -121,7 +121,7 @@
 
   .header {
     backdrop-filter: saturate(140%) blur(10px); -webkit-backdrop-filter: saturate(140%) blur(10px);
-    background: rgba(250,250,247,.82);
+    background: #FFFFFF;
   }
   .header-link { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #0F0E0C; transition: color .3s ease; font-weight: 500; }
   .header-link:hover { color: #B89248; }
@@ -390,10 +390,8 @@
 <!-- Sticky header -->
 <header class="header sticky top-0 z-40 border-b border-ink/8">
   <div class="max-w-[1340px] mx-auto px-5 lg:px-10 h-[68px] flex items-center justify-between gap-6">
-    <a href="#top" class="flex items-center gap-2">
-      <img src="media/blanca/blanca-logo.jpg" alt="Blanca Beauty Bar" class="h-9 w-9 rounded-full object-cover"/>
-      <span class="font-serif text-[26px] tracking-tight text-ink font-light leading-none">Blanca</span>
-      <span class="ital text-stone text-xs ml-1.5 font-serif hidden md:inline">Beauty Bar · London ON</span>
+    <a href="#top" class="flex items-center" aria-label="Blanca Beauty Bar home">
+      <img src="media/blanca/blanca-logo.jpg" alt="Blanca Beauty" class="h-12 lg:h-14 w-auto object-contain" style="mix-blend-mode: multiply;"/>
     </a>
     <nav class="hidden lg:flex items-center gap-8">
       <a href="#chair" class="header-link">The Chair</a>
