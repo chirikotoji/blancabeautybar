@@ -57,12 +57,72 @@
   .rev.pre.is-in { opacity: 1; transform: none; }
   details summary { list-style: none; cursor: pointer; }
   details summary::-webkit-details-marker { display: none; }
+
+  .mm-btn {
+    width: 44px; height: 44px;
+    position: relative; background: transparent; border: none; cursor: pointer;
+  }
+  .mm-btn span {
+    display: block; position: absolute;
+    left: 10px; right: 10px;
+    height: 1.5px; background: #161512;
+    transition: transform .3s cubic-bezier(.2,.8,.2,1), opacity .25s ease, top .3s ease;
+  }
+  .mm-btn span:nth-child(1) { top: 14px; }
+  .mm-btn span:nth-child(2) { top: 21px; }
+  .mm-btn span:nth-child(3) { top: 28px; }
+  .mm-btn.open span:nth-child(1) { transform: rotate(45deg); top: 21px; }
+  .mm-btn.open span:nth-child(2) { opacity: 0; }
+  .mm-btn.open span:nth-child(3) { transform: rotate(-45deg); top: 21px; }
+  .mm {
+    position: fixed; inset: 0; z-index: 70;
+    background: #EFE7D6;
+    display: flex; flex-direction: column;
+    opacity: 0; pointer-events: none;
+    transition: opacity .35s cubic-bezier(.2,.8,.2,1);
+    overflow-y: auto;
+  }
+  .mm.open { opacity: 1; pointer-events: auto; }
+  .mm-head {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 20px;
+    border-bottom: 1px solid rgba(22,21,18,.1);
+  }
+  .mm-body {
+    flex: 1;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 3rem 1.5rem 6rem; gap: 1.25rem;
+  }
+  .mm-body a.mm-link {
+    font-family: 'Italiana', serif;
+    font-size: clamp(36px, 9vw, 56px);
+    line-height: 1; color: #161512;
+    transition: color .25s ease, transform .35s cubic-bezier(.2,.8,.2,1);
+    text-align: center;
+  }
+  .mm-body a.mm-link:hover, .mm-body a.mm-link:active { color: #6B2027; }
+  .mm-foot {
+    padding: 1.5rem;
+    border-top: 1px solid rgba(22,21,18,.1);
+    display: flex; flex-direction: column; align-items: center; gap: 1rem;
+  }
+  body.mm-locked { overflow: hidden; }
+  .top-bar-mobile {
+    font-family: 'Anton', Impact, sans-serif;
+    text-transform: uppercase;
+    font-size: 12px; letter-spacing: 0.10em;
+    padding: 0.55rem 1rem;
+  }
+  @media (min-width: 768px) {
+    .top-bar-mobile { font-size: 11px; letter-spacing: 0.18em; }
+  }
+
 </style>
 </head>
 <body>
 
 <div class="running-rule bg-paper">
-  <div class="max-w-[1500px] mx-auto px-5 lg:px-10 py-2 flex items-center justify-between gap-6 smcaps text-ink/75">
+  <div class="max-w-[1500px] mx-auto px-5 lg:px-10 flex items-center justify-between gap-6 text-ink/75 top-bar-mobile">
     <span>№ VII · 2026</span>
     <span class="hidden md:inline">London, Ontario</span>
     <span><a href="tel:+15196302272" class="h-link" data-track="phone_click">(519) 630-2272</a></span>
@@ -84,8 +144,35 @@
       <a href="/visit/" class="smcaps text-ink h-link ">Visit</a>
     </nav>
     <a href="https://www.fresha.com/a/blanca-beauty-bar-london-392-clarence-street-zkvszbqf" target="_blank" rel="noopener" class="btn" data-track="book_click" data-track-loc="header">Book →</a>
+    <button class="mm-btn lg:hidden" id="mmBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
+<div class="mm" id="mm" aria-hidden="true">
+  <div class="mm-head">
+    <a href="/" class="flex items-baseline gap-2.5">
+      <span class="display text-[28px] text-ink leading-none">Blanca</span>
+      <span class="hand text-ox text-[20px] leading-none" style="margin-left: -0.15em;">Beauty Bar</span>
+    </a>
+    <button class="mm-btn open" id="mmClose" aria-label="Close menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mm-body">
+    <a href="/about/" class="mm-link">About</a>
+    <a href="/services/russian-manicure/" class="mm-link">Manicure</a>
+    <a href="/services/laser/" class="mm-link">Laser</a>
+    <a href="/services/lash-brow/" class="mm-link">Lash &amp; Brow</a>
+    <a href="/lookbook/" class="mm-link" style="font-style: italic; color: #6B2027;">Lookbook</a>
+    <a href="/visit/" class="mm-link">Visit</a>
+  </nav>
+  <div class="mm-foot">
+    <a href="https://www.fresha.com/a/blanca-beauty-bar-london-392-clarence-street-zkvszbqf" target="_blank" rel="noopener" class="btn" data-track="book_click" data-track-loc="mobile-menu">Book on Fresha →</a>
+    <a href="tel:+15196302272" class="smcaps text-ink" data-track="phone_click">(519) 630-2272</a>
+  </div>
+</div>
+
 
 <!-- HERO -->
 <section class="bg-paper pt-12 lg:pt-20 pb-12 lg:pb-16">
@@ -183,6 +270,24 @@
 
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.0.42/dist/lenis.min.js"></script>
 <script>
+  
+  (function () {
+    const btn = document.getElementById('mmBtn');
+    const close = document.getElementById('mmClose');
+    const mm = document.getElementById('mm');
+    if (!btn || !mm) return;
+    function set(open) {
+      mm.classList.toggle('open', open);
+      btn.classList.toggle('open', open);
+      mm.setAttribute('aria-hidden', open ? 'false' : 'true');
+      document.body.classList.toggle('mm-locked', open);
+    }
+    btn.addEventListener('click', () => set(!mm.classList.contains('open')));
+    close?.addEventListener('click', () => set(false));
+    mm.querySelectorAll('a').forEach(a => a.addEventListener('click', () => set(false)));
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') set(false); });
+  })();
+
   document.addEventListener('click', (e) => {
     const a = e.target?.closest?.('a[href]'); if (!a) return;
     const href = a.getAttribute('href') || '';

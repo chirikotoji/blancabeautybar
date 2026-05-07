@@ -255,7 +255,7 @@
     line-height: 1;
   }
 
-  /* Header , transparent, becomes solid on scroll */
+  /* Header, transparent, becomes solid on scroll */
   .nav-bar {
     position: fixed; top: 0; left: 0; right: 0; z-index: 40;
     transition: background .3s ease, border-color .3s ease, backdrop-filter .3s ease;
@@ -267,6 +267,74 @@
     -webkit-backdrop-filter: saturate(180%) blur(10px);
     border-bottom: 1px solid rgba(26,23,21,.08);
   }
+
+  /* Top bar typography, readable on mobile, more luxe on desktop */
+  .top-bar {
+    font-family: 'Italiana', serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.10em;
+    padding-left: 1rem; padding-right: 1rem;
+  }
+  @media (min-width: 768px) {
+    .top-bar { font-size: 11px; letter-spacing: 0.32em; }
+  }
+
+  /* Mobile menu button (hamburger) */
+  .mm-btn {
+    width: 44px; height: 44px;
+    position: relative; background: transparent; border: none;
+    cursor: pointer;
+  }
+  .mm-btn span {
+    display: block; position: absolute;
+    left: 10px; right: 10px;
+    height: 1.5px; background: #1A1715;
+    transition: transform .3s cubic-bezier(.2,.8,.2,1), opacity .25s ease, top .3s ease;
+  }
+  .mm-btn span:nth-child(1) { top: 14px; }
+  .mm-btn span:nth-child(2) { top: 21px; }
+  .mm-btn span:nth-child(3) { top: 28px; }
+  .mm-btn.open span:nth-child(1) { transform: rotate(45deg); top: 21px; }
+  .mm-btn.open span:nth-child(2) { opacity: 0; }
+  .mm-btn.open span:nth-child(3) { transform: rotate(-45deg); top: 21px; }
+
+  /* Mobile menu overlay */
+  .mm {
+    position: fixed; inset: 0; z-index: 70;
+    background: #F5EDE0;
+    display: flex; flex-direction: column;
+    opacity: 0; pointer-events: none;
+    transition: opacity .35s cubic-bezier(.2,.8,.2,1);
+    overflow-y: auto;
+  }
+  .mm.open { opacity: 1; pointer-events: auto; }
+  .mm-head {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 20px;
+    border-bottom: 1px solid rgba(26,23,21,.1);
+  }
+  .mm-body {
+    flex: 1;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 3rem 1.5rem 6rem;
+    gap: 1.25rem;
+  }
+  .mm-body a.mm-link {
+    font-family: 'Italiana', serif;
+    font-size: clamp(36px, 9vw, 56px);
+    line-height: 1;
+    color: #1A1715;
+    transition: color .25s ease, transform .35s cubic-bezier(.2,.8,.2,1);
+    text-align: center;
+  }
+  .mm-body a.mm-link:hover, .mm-body a.mm-link:active { color: #E8556D; transform: rotate(-1deg); }
+  .mm-foot {
+    padding: 1.5rem;
+    border-top: 1px solid rgba(26,23,21,.1);
+    display: flex; flex-direction: column; align-items: center; gap: 1rem;
+  }
+  body.mm-locked { overflow: hidden; }
 
   /* Annotation arrows */
   .arrow-curl::before {
@@ -289,10 +357,10 @@
 <div class="cursor-dot" id="cursorDot"></div>
 
 <!-- TOP BAR -->
-<div class="bg-ink text-cream py-2 text-center" style="font-family: 'Italiana', serif; letter-spacing: 0.32em; text-transform: uppercase; font-size: 11px;">
+<div class="bg-ink text-cream py-2.5 text-center top-bar">
   <a href="tel:+15196302272" class="u-link" data-cursor data-track="phone_click">(519) 630-2272</a>
-  <span class="px-3 text-cream/50">·</span>
-  <span>392 Clarence Street, London ON</span>
+  <span class="px-2 md:px-3 text-cream/50">·</span>
+  <span>392 Clarence St</span>
   <span class="hidden md:inline px-3 text-cream/50">·</span>
   <span class="hidden md:inline">Wed – Sun</span>
 </div>
@@ -315,8 +383,38 @@
     <a href="https://www.fresha.com/a/blanca-beauty-bar-london-392-clarence-street-zkvszbqf" target="_blank" rel="noopener" class="btn-coral hidden md:inline-flex" data-cursor data-track="book_click" data-track-loc="header">
       Book →
     </a>
+    <button class="mm-btn lg:hidden" id="mmBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
+
+<!-- Mobile menu overlay -->
+<div class="mm" id="mm" aria-hidden="true">
+  <div class="mm-head">
+    <a href="/" class="flex items-baseline gap-2.5">
+      <span class="display text-[28px] text-ink leading-none">Blanca</span>
+      <span class="hand text-coral text-[20px] leading-none" style="margin-left: -0.15em; font-weight: 700;">Beauty Bar</span>
+    </a>
+    <button class="mm-btn open" id="mmClose" aria-label="Close menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mm-body">
+    <a href="/about/" class="mm-link">About</a>
+    <a href="/services/russian-manicure/" class="mm-link" style="font-style: italic; color: #E8556D;">Russian Manicure</a>
+    <a href="/services/laser/" class="mm-link">Laser</a>
+    <a href="/services/lash-brow/" class="mm-link">Lash &amp; Brow</a>
+    <a href="/lookbook/" class="mm-link">Lookbook</a>
+    <a href="/visit/" class="mm-link">Visit</a>
+  </nav>
+  <div class="mm-foot">
+    <a href="https://www.fresha.com/a/blanca-beauty-bar-london-392-clarence-street-zkvszbqf" target="_blank" rel="noopener" class="btn-coral" data-track="book_click" data-track-loc="mobile-menu">
+      Book on Fresha →
+    </a>
+    <a href="tel:+15196302272" class="smcaps text-ink" data-track="phone_click">(519) 630-2272</a>
+  </div>
+</div>
 
 <!-- HERO , full-bleed, immersive, kinetic typography -->
 <section class="relative bg-paper" style="min-height: 100vh; padding-top: 100px;">
@@ -881,6 +979,24 @@
       }
     });
   });
+
+  // Mobile menu toggle
+  (function () {
+    const btn = document.getElementById('mmBtn');
+    const close = document.getElementById('mmClose');
+    const mm = document.getElementById('mm');
+    if (!btn || !mm) return;
+    function set(open) {
+      mm.classList.toggle('open', open);
+      btn.classList.toggle('open', open);
+      mm.setAttribute('aria-hidden', open ? 'false' : 'true');
+      document.body.classList.toggle('mm-locked', open);
+    }
+    btn.addEventListener('click', () => set(!mm.classList.contains('open')));
+    close?.addEventListener('click', () => set(false));
+    mm.querySelectorAll('a').forEach(a => a.addEventListener('click', () => set(false)));
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') set(false); });
+  })();
 
   // Header transparent → solid on scroll
   const navBar = document.getElementById('navBar');
