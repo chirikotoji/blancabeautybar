@@ -299,7 +299,7 @@
     <div class="aspect-[4/5] lg:aspect-auto lg:h-[640px] order-2 lg:order-1 ph">
       <img src="/media/client/nail-chrome-glass.jpg" alt="A Russian e-file manicure, finished" loading="eager"/>
     </div>
-    <div class="px-6 lg:px-16 py-16 lg:py-24 order-1 lg:order-2 rev pre">
+    <div class="px-6 lg:px-16 py-16 lg:py-24 order-1 lg:order-2 rev">
       <p class="display italic text-ink/80" style="font-size: clamp(20px, 2.4vw, 32px); font-weight: 500;">London, Ontario</p>
       <h1 class="display text-ink mt-2" style="font-size: clamp(72px, 10vw, 156px); font-weight: 700;">
         <span class="block">Blanca</span>
@@ -319,8 +319,8 @@
 <!-- MEET BLANCA — full-width tan band -->
 <section style="background: #C7A87C;" class="py-20 lg:py-28 text-white text-center">
   <div class="max-w-2xl mx-auto px-6">
-    <p class="smcaps mb-6 rev pre" style="color: rgba(255,255,255,0.85);">Meet Blanca Beauty Bar</p>
-    <p class="leading-relaxed text-white/95 rev pre" style="font-size: 15px;">
+    <p class="smcaps mb-6 rev" style="color: rgba(255,255,255,0.85);">Meet Blanca Beauty Bar</p>
+    <p class="leading-relaxed text-white/95 rev" style="font-size: 15px;">
       Located in the heart of downtown London, Ontario, Blanca Beauty Bar pairs precision treatments with a calm, considered space. Russian e-file manicures, diode laser, and lash &amp; brow services delivered by trained therapists who care about every detail. Walk out feeling cared for.
     </p>
   </div>
@@ -329,10 +329,10 @@
 <!-- HEIGHTENED LEVEL OF SELF-CARE -->
 <section class="bg-paper py-20 lg:py-28">
   <div class="max-w-[1400px] mx-auto px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-    <div class="aspect-[4/5] ph rev pre">
+    <div class="aspect-[4/5] ph rev">
       <img src="/media/brand/method-portrait.jpg" alt="Buthyna performing a Russian manicure" loading="lazy"/>
     </div>
-    <div class="rev pre">
+    <div class="rev">
       <p class="smcaps text-tandk mb-5">Heightened Level of Self-Care</p>
       <h2 class="display text-ink mb-7" style="font-size: clamp(40px, 5vw, 68px); font-weight: 700;">
         Trained in <span class="italic">The Blanca Way.</span>
@@ -381,10 +381,10 @@
 <!-- THE BLANCA STANDARD -->
 <section class="bg-paper py-20 lg:py-28">
   <div class="max-w-[1300px] mx-auto px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-    <div class="aspect-square ph rounded-full overflow-hidden max-w-md mx-auto rev pre" style="border-radius: 50%;">
+    <div class="aspect-square ph rounded-full overflow-hidden max-w-md mx-auto rev" style="border-radius: 50%;">
       <img src="/media/brand/buthyna-founder.jpg" alt="Buthyna Abu-Deyah, founder of Blanca Beauty Bar" loading="lazy" style="object-position: center 30%;"/>
     </div>
-    <div class="rev pre">
+    <div class="rev">
       <p class="smcaps text-tandk mb-5">The Blanca Standard</p>
       <h2 class="display text-ink mb-7" style="font-size: clamp(40px, 5vw, 68px); font-weight: 700;">
         Founded by <span class="italic">Buthyna Abu-Deyah.</span>
@@ -436,7 +436,7 @@
 <!-- LOOK GOOD. FEEL BETTER. -->
 <section class="bg-paper py-20 lg:py-28">
   <div class="max-w-[1300px] mx-auto px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-    <div class="rev pre">
+    <div class="rev">
       <p class="smcaps text-tandk mb-5">Look Good. Feel Better.</p>
       <h2 class="display text-ink mb-7" style="font-size: clamp(40px, 5vw, 68px); font-weight: 700;">
         Quality you can <span class="italic">trust.</span>
@@ -449,7 +449,7 @@
       </p>
       <a href="https://www.fresha.com/a/blanca-beauty-bar-london-392-clarence-street-zkvszbqf" target="_blank" rel="noopener" class="btn" data-track="book_click" data-track-loc="quality">Book Now →</a>
     </div>
-    <div class="aspect-[4/5] ph rev pre">
+    <div class="aspect-[4/5] ph rev">
       <img src="/media/brand/nail-tools.jpg" alt="Autoclave-sterilized tools at Blanca" loading="lazy"/>
     </div>
   </div>
@@ -499,16 +499,13 @@
   <span>→</span>
 </a>
 
-<script src="https://cdn.jsdelivr.net/npm/lenis@1.0.42/dist/lenis.min.js"></script>
 <script>
-  // Reveal on scroll — set up FIRST so it runs even if anything below errors
+  // Reveal animation — JS-progressive: content visible by default, only hides if JS works
   (function () {
     try {
-      const els = document.querySelectorAll('.rev.pre');
-      if (!('IntersectionObserver' in window)) {
-        els.forEach(el => el.classList.add('is-in'));
-        return;
-      }
+      if (!('IntersectionObserver' in window)) return;
+      const els = document.querySelectorAll('.rev');
+      els.forEach(el => el.classList.add('pre'));
       const io = new IntersectionObserver((entries) => {
         entries.forEach(en => {
           if (en.isIntersecting) {
@@ -518,21 +515,11 @@
         });
       }, { threshold: 0.08, rootMargin: '0px 0px -5% 0px' });
       els.forEach(el => io.observe(el));
-      // Failsafe: anything still hidden after 1.5s — show it
+      // Failsafe: show anything still hidden after 1.5s
       setTimeout(() => document.querySelectorAll('.rev.pre:not(.is-in)').forEach(el => el.classList.add('is-in')), 1500);
     } catch (e) {
-      document.querySelectorAll('.rev.pre').forEach(el => el.classList.add('is-in'));
+      document.querySelectorAll('.rev.pre').forEach(el => { el.classList.remove('pre'); el.classList.add('is-in'); });
     }
-  })();
-
-  // Lenis smooth scroll (optional polish — must not break the page if it fails)
-  (function () {
-    try {
-      if (typeof Lenis === 'undefined') return;
-      const lenis = new Lenis({ duration: 1.0, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smoothWheel: true, smoothTouch: false });
-      const raf = t => { lenis.raf(t); requestAnimationFrame(raf); };
-      requestAnimationFrame(raf);
-    } catch (e) {}
   })();
 
   // Mobile menu toggle
