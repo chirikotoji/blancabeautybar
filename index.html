@@ -4,127 +4,150 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>Blanca Beauty Bar · Russian Manicure · London Ontario</title>
-<meta name="description" content="Russian e-file manicure, diode laser hair removal, Yumi keratin lash lift and brow lamination. By appointment at 392 Clarence Street, London Ontario." />
-<meta name="theme-color" content="#EFE7D6" />
+<meta name="description" content="A Russian e-file manicure that lasts four to five weeks. By appointment with Buthyna and Maryam at 392 Clarence Street, London Ontario." />
+<meta name="theme-color" content="#F5EDE0" />
 
-<meta property="og:title" content="Blanca Beauty Bar" />
-<meta property="og:description" content="Russian e-file manicure that lasts four to five weeks. By appointment at 392 Clarence Street." />
+<meta property="og:title" content="Blanca Beauty Bar · Where your nails last four to five weeks." />
+<meta property="og:description" content="A Russian e-file manicure done properly. Open Wed–Sun on Clarence Street." />
 <meta property="og:image" content="media/brand/hero-editorial.jpg" />
 <meta property="og:type" content="website" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Anton&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Yeseva+One&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet" />
 
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        fontFamily: {
-          display: ['Italiana', 'serif'],
-          serif:   ['"Cormorant Garamond"', 'Georgia', 'serif'],
-          cond:    ['Anton', 'Impact', 'sans-serif'],
-          hand:    ['Caveat', 'cursive']
-        },
-        colors: {
-          paper:   '#EFE7D6',
-          paperdk: '#E5DBC4',
-          ink:     '#161512',
-          ox:      '#6B2027',
-          oxdk:    '#4A1418',
-          dust:    '#8E7E5F'
-        }
-      }
+  tailwind.config = { theme: { extend: {
+    fontFamily: {
+      display: ['Italiana','serif'],
+      heavy:   ['"Yeseva One"','serif'],
+      serif:   ['"Cormorant Garamond"','Georgia','serif'],
+      hand:    ['Caveat','cursive']
+    },
+    colors: {
+      paper:   '#F5EDE0',
+      paperdk: '#EBDFCB',
+      cream:   '#FFF8EB',
+      ink:     '#1A1715',
+      coral:   '#E8556D',
+      coraldk: '#C73854',
+      gold:    '#B89248',
+      sage:    '#B5BFA7'
     }
-  };
+  }}};
 </script>
 
 <style>
   :root { color-scheme: light; }
-  html, body { background: #EFE7D6; color: #161512; }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: auto; }
+  html, body { background: #F5EDE0; color: #1A1715; }
   body {
     font-family: 'Cormorant Garamond', Georgia, serif;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
-    font-size: 17px;
+    font-size: 18px;
     line-height: 1.55;
   }
-  ::selection { background: #6B2027; color: #EFE7D6; }
+  ::selection { background: #E8556D; color: #FFF8EB; }
 
   .display { font-family: 'Italiana', serif; font-weight: 400; line-height: 0.92; letter-spacing: -0.005em; }
+  .heavy   { font-family: 'Yeseva One', serif; font-weight: 400; line-height: 0.95; letter-spacing: -0.015em; }
   .serif   { font-family: 'Cormorant Garamond', Georgia, serif; }
-  .cond    { font-family: 'Anton', Impact, sans-serif; letter-spacing: 0.04em; }
   .hand    { font-family: 'Caveat', cursive; }
 
   .smcaps {
-    font-family: 'Anton', Impact, sans-serif;
-    letter-spacing: 0.18em;
+    font-family: 'Italiana', serif;
+    letter-spacing: 0.32em;
     text-transform: uppercase;
     font-weight: 400;
     font-size: 12px;
   }
 
-  .dropcap::first-letter {
-    font-family: 'Italiana', serif;
-    font-style: normal;
-    font-size: 5.6em;
-    line-height: 0.86;
-    float: left;
-    margin: 0.05em 0.12em -0.04em -0.04em;
-    color: #6B2027;
-    font-weight: 400;
-  }
-
   .btn {
-    display: inline-flex; align-items: center; gap: 0.6rem;
-    background: #161512; color: #EFE7D6;
-    padding: 14px 28px;
-    font-family: 'Anton', sans-serif;
-    font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 400;
-    border: 1.5px solid #161512;
-    transition: all .25s ease;
+    display: inline-flex; align-items: center; gap: 0.7rem;
+    background: #1A1715; color: #FFF8EB;
+    padding: 16px 32px;
+    font-family: 'Italiana', serif;
+    font-size: 14px; letter-spacing: 0.32em; text-transform: uppercase; font-weight: 400;
+    border-radius: 999px;
+    transition: transform .3s cubic-bezier(.2,.8,.2,1), background .25s ease;
   }
-  .btn:hover { background: #6B2027; border-color: #6B2027; }
+  .btn:hover { background: #E8556D; transform: translateY(-2px) rotate(-0.5deg); }
+  .btn-coral {
+    display: inline-flex; align-items: center; gap: 0.7rem;
+    background: #E8556D; color: #FFF8EB;
+    padding: 16px 32px;
+    font-family: 'Italiana', serif;
+    font-size: 14px; letter-spacing: 0.32em; text-transform: uppercase; font-weight: 400;
+    border-radius: 999px;
+    transition: transform .3s cubic-bezier(.2,.8,.2,1), background .25s ease;
+  }
+  .btn-coral:hover { background: #1A1715; transform: translateY(-2px) rotate(0.5deg); }
   .btn-out {
-    display: inline-flex; align-items: center; gap: 0.6rem;
-    background: transparent; color: #161512;
-    padding: 13px 28px;
-    font-family: 'Anton', sans-serif;
-    font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 400;
-    border: 1.5px solid #161512;
-    transition: all .25s ease;
+    display: inline-flex; align-items: center; gap: 0.7rem;
+    background: transparent; color: #1A1715;
+    padding: 15px 32px;
+    font-family: 'Italiana', serif;
+    font-size: 14px; letter-spacing: 0.32em; text-transform: uppercase; font-weight: 400;
+    border: 1px solid #1A1715;
+    border-radius: 999px;
+    transition: all .3s ease;
   }
-  .btn-out:hover { background: #161512; color: #EFE7D6; }
+  .btn-out:hover { background: #1A1715; color: #FFF8EB; transform: translateY(-2px); }
 
+  /* Mobile sticky book bar */
   .mobile-book {
-    position: fixed; bottom: 0; left: 0; right: 0; z-index: 50;
-    background: #161512; color: #EFE7D6;
-    padding: 16px 20px;
-    font-family: 'Anton', sans-serif;
-    font-size: 13px; letter-spacing: 0.24em; text-transform: uppercase;
+    position: fixed; bottom: 14px; left: 14px; right: 14px; z-index: 50;
+    background: #1A1715; color: #FFF8EB;
+    padding: 16px 22px;
+    font-family: 'Italiana', serif;
+    font-size: 13px; letter-spacing: 0.32em; text-transform: uppercase;
     text-align: center;
     display: flex; align-items: center; justify-content: space-between;
-    border-top: 1.5px solid #6B2027;
+    border-radius: 999px;
+    box-shadow: 0 14px 40px -10px rgba(26,23,21,.45);
   }
   @media (min-width: 768px) { .mobile-book { display: none; } }
 
-  .running-rule { border-top: 1.5px solid #161512; border-bottom: 1.5px solid #161512; }
-  .ed-photo { overflow: hidden; background: #E5DBC4; }
-
-  .pullquote { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 400; line-height: 1.04; letter-spacing: -0.005em; }
-
-  .numeral {
-    font-family: 'Italiana', serif;
-    font-weight: 400;
-    line-height: 0.82;
-    color: #6B2027;
-    letter-spacing: -0.04em;
+  /* Marquee */
+  .marquee { display: flex; overflow: hidden; gap: 0; }
+  .marquee-track {
+    display: flex; flex-shrink: 0;
+    animation: scrollx 48s linear infinite;
   }
+  .marquee-track > * { flex-shrink: 0; }
+  @keyframes scrollx { from { transform: translateX(0); } to { transform: translateX(-100%); } }
+  .marquee:hover .marquee-track { animation-play-state: paused; }
 
+  /* Polish wall card */
+  .swatch {
+    aspect-ratio: 3/5;
+    border-radius: 200px 200px 4px 4px;
+    box-shadow: inset 0 0 0 1px rgba(26,23,21,.04);
+    transition: transform .35s cubic-bezier(.2,.8,.2,1);
+  }
+  .swatch:hover { transform: translateY(-8px) rotate(-3deg); }
+
+  /* Wobble keyframes */
+  @keyframes wobble {
+    0%,100% { transform: rotate(0deg); }
+    25%     { transform: rotate(-1.2deg); }
+    75%     { transform: rotate(1.2deg); }
+  }
+  .wobble:hover { animation: wobble 0.6s ease-in-out; }
+
+  @keyframes float-up {
+    0%,100% { transform: translateY(0); }
+    50%     { transform: translateY(-6px); }
+  }
+  .float { animation: float-up 4s ease-in-out infinite; }
+
+  /* Gallery (lookbook) */
   .gallery-row {
-    display: flex; gap: 6px;
+    display: flex; gap: 8px;
     overflow-x: auto; overflow-y: hidden;
     scrollbar-width: none;
     cursor: grab;
@@ -133,225 +156,303 @@
   .gallery-row::-webkit-scrollbar { display: none; }
   .gallery-row.is-dragging { cursor: grabbing; user-select: none; }
   .gallery-row.is-dragging img { pointer-events: none; }
-  .gallery-track { display: flex; gap: 6px; flex-shrink: 0; }
+  .gallery-track { display: flex; gap: 8px; flex-shrink: 0; }
   .gallery-card {
     flex-shrink: 0; height: 60vh; max-height: 480px;
-    aspect-ratio: 4/5; overflow: hidden; background: #E5DBC4;
+    aspect-ratio: 4/5;
+    overflow: hidden; background: #EBDFCB;
+    border-radius: 200px 200px 12px 12px;
   }
   .gallery-card.tall { aspect-ratio: 3/5; }
-  .gallery-card.wide { aspect-ratio: 5/4; }
-  .gallery-card img { width: 100%; height: 100%; object-fit: cover; user-select: none; -webkit-user-drag: none; }
-  @media (max-width: 768px) { .gallery-card { height: 52vh; max-height: 420px; } }
+  .gallery-card.wide { aspect-ratio: 5/4; border-radius: 240px 240px 12px 12px; }
+  .gallery-card img { width: 100%; height: 100%; object-fit: cover; user-select: none; -webkit-user-drag: none; transition: transform 1s ease; }
+  .gallery-card:hover img { transform: scale(1.06); }
+  @media (max-width: 768px) { .gallery-card { height: 56vh; max-height: 460px; } }
 
-  .menu-row { transition: color .2s ease; border-bottom: 1px solid rgba(22,21,18,.18); }
-  .menu-row:hover { color: #6B2027; }
+  /* Underline animation on links */
+  .u-link {
+    position: relative; display: inline-block;
+  }
+  .u-link::after {
+    content: ''; position: absolute; left: 0; bottom: -3px;
+    width: 100%; height: 1px; background: currentColor;
+    transform: scaleX(0); transform-origin: right;
+    transition: transform .4s cubic-bezier(.2,.8,.2,1);
+  }
+  .u-link:hover::after { transform: scaleX(1); transform-origin: left; }
 
-  .rev { opacity: 1; transition: opacity .9s ease, transform .9s ease; }
-  .rev.pre { opacity: 0; transform: translateY(12px); }
+  /* Reveal */
+  .rev { opacity: 1; transition: opacity 1s ease, transform 1s cubic-bezier(.2,.8,.2,1); }
+  .rev.pre { opacity: 0; transform: translateY(28px); }
   .rev.pre.is-in { opacity: 1; transform: none; }
 
-  .h-link { transition: color .2s ease; }
-  .h-link:hover { color: #6B2027; }
+  /* Letter cascade */
+  .cascade > span { display: inline-block; opacity: 0; transform: translateY(40px) rotate(8deg); transition: opacity .9s cubic-bezier(.2,.8,.2,1), transform .9s cubic-bezier(.2,.8,.2,1); }
+  .cascade.is-in > span { opacity: 1; transform: none; }
+  .cascade > span:nth-child(1) { transition-delay: 0.05s; }
+  .cascade > span:nth-child(2) { transition-delay: 0.10s; }
+  .cascade > span:nth-child(3) { transition-delay: 0.15s; }
+  .cascade > span:nth-child(4) { transition-delay: 0.20s; }
+  .cascade > span:nth-child(5) { transition-delay: 0.25s; }
+  .cascade > span:nth-child(6) { transition-delay: 0.30s; }
+  .cascade > span:nth-child(7) { transition-delay: 0.35s; }
+
+  /* Glowing dot cursor (desktop only) */
+  @media (hover: hover) and (pointer: fine) {
+    body { cursor: none; }
+    a, button, .gallery-row, [data-cursor], input, textarea, select { cursor: none; }
+    .cursor-dot {
+      position: fixed; top: 0; left: 0; z-index: 9999; pointer-events: none;
+      width: 14px; height: 14px;
+      border-radius: 999px;
+      background: #E8556D;
+      mix-blend-mode: multiply;
+      transform: translate(-50%, -50%);
+      transition: width .35s cubic-bezier(.2,.8,.2,1), height .35s cubic-bezier(.2,.8,.2,1), background .25s ease;
+    }
+    .cursor-dot.hover {
+      width: 56px; height: 56px;
+      background: #1A1715; mix-blend-mode: difference;
+    }
+  }
+
+  /* Steps */
+  .step-num {
+    font-family: 'Italiana', serif;
+    color: #E8556D;
+    line-height: 0.85;
+    letter-spacing: -0.04em;
+  }
+
+  .menu-row {
+    transition: padding-left .3s cubic-bezier(.2,.8,.2,1), color .25s ease;
+    border-bottom: 1px solid rgba(26,23,21,.18);
+  }
+  .menu-row:hover { padding-left: 1rem; color: #E8556D; }
+  .menu-row .arrow { display: inline-block; transition: transform .3s ease; }
+  .menu-row:hover .arrow { transform: translate(4px,-4px); }
+
+  /* The Wall (color swatches) */
+  .wall-card {
+    flex-shrink: 0;
+    width: 110px;
+    aspect-ratio: 3/5;
+    border-radius: 80px 80px 6px 6px;
+    box-shadow: 0 18px 40px -22px rgba(26,23,21,.55);
+    position: relative;
+  }
+  .wall-card span {
+    position: absolute; bottom: -22px; left: 0; right: 0; text-align: center;
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    color: #1A1715; font-size: 12px;
+  }
+
+  /* Hand-written scribble flag */
+  .scribble {
+    font-family: 'Caveat', cursive;
+    color: #E8556D;
+    font-weight: 600;
+    line-height: 1;
+  }
+
+  /* Header , transparent, becomes solid on scroll */
+  .nav-bar {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 40;
+    transition: background .3s ease, border-color .3s ease, backdrop-filter .3s ease;
+    border-bottom: 1px solid transparent;
+  }
+  .nav-bar.scrolled {
+    background: rgba(245,237,224,.92);
+    backdrop-filter: saturate(180%) blur(10px);
+    -webkit-backdrop-filter: saturate(180%) blur(10px);
+    border-bottom: 1px solid rgba(26,23,21,.08);
+  }
+
+  /* Annotation arrows */
+  .arrow-curl::before {
+    content: '';
+    position: absolute; left: -28px; top: 50%;
+    width: 24px; height: 1.5px; background: #E8556D;
+    border-radius: 999px;
+  }
+  .arrow-curl::after {
+    content: '';
+    position: absolute; left: -10px; top: 50%; transform: translateY(-50%) rotate(45deg);
+    width: 8px; height: 8px;
+    border-top: 1.5px solid #E8556D;
+    border-right: 1.5px solid #E8556D;
+  }
 </style>
 </head>
 <body>
 
-<!-- MASTHEAD -->
-<div class="running-rule bg-paper">
-  <div class="max-w-[1500px] mx-auto px-5 lg:px-10 py-2 flex items-center justify-between gap-6 smcaps text-ink/75">
-    <span>№ VII · 2026</span>
-    <span class="hidden md:inline">London, Ontario</span>
-    <span><a href="tel:+15196302272" class="h-link" data-track="phone_click">(519) 630-2272</a></span>
-  </div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- TOP BAR -->
+<div class="bg-ink text-cream py-2 text-center" style="font-family: 'Italiana', serif; letter-spacing: 0.32em; text-transform: uppercase; font-size: 11px;">
+  <a href="tel:+15196302272" class="u-link" data-cursor data-track="phone_click">(519) 630-2272</a>
+  <span class="px-3 text-cream/50">·</span>
+  <span>392 Clarence Street, London ON</span>
+  <span class="hidden md:inline px-3 text-cream/50">·</span>
+  <span class="hidden md:inline">Wed – Sun</span>
 </div>
 
 <!-- HEADER -->
-<header class="sticky top-0 z-40 bg-paper" style="border-bottom: 1.5px solid #161512;">
-  <div class="max-w-[1500px] mx-auto px-5 lg:px-10 h-[68px] flex items-center justify-between gap-6">
-    <a href="/" class="flex items-baseline gap-2.5">
-      <span class="display text-[28px] lg:text-[32px] text-ink leading-none">Blanca</span>
-      <span class="hand text-ox text-[20px] lg:text-[22px] leading-none" style="margin-left: -0.15em;">Beauty Bar</span>
+<header class="nav-bar" id="navBar">
+  <div class="max-w-[1500px] mx-auto px-5 lg:px-10 h-[78px] flex items-center justify-between gap-6">
+    <a href="/" class="flex items-baseline gap-2.5" data-cursor>
+      <span class="display text-[28px] lg:text-[34px] text-ink leading-none">Blanca</span>
+      <span class="hand text-coral text-[20px] lg:text-[24px] leading-none" style="margin-left: -0.15em; font-weight: 700;">Beauty Bar</span>
     </a>
     <nav class="hidden lg:flex items-center gap-9">
-      <a href="/about/" class="smcaps text-ink h-link">About</a>
-      <a href="/services/russian-manicure/" class="smcaps text-ink h-link">Manicure</a>
-      <a href="/services/laser/" class="smcaps text-ink h-link">Laser</a>
-      <a href="/services/lash-brow/" class="smcaps text-ink h-link">Lash &amp; Brow</a>
-      <a href="/lookbook/" class="smcaps text-ink h-link">Lookbook</a>
-      <a href="/visit/" class="smcaps text-ink h-link">Visit</a>
+      <a href="/about/" class="smcaps text-ink u-link" data-cursor>About</a>
+      <a href="/services/russian-manicure/" class="smcaps text-ink u-link" data-cursor>Manicure</a>
+      <a href="/services/laser/" class="smcaps text-ink u-link" data-cursor>Laser</a>
+      <a href="/services/lash-brow/" class="smcaps text-ink u-link" data-cursor>Lash &amp; Brow</a>
+      <a href="/lookbook/" class="smcaps text-ink u-link" data-cursor>Lookbook</a>
+      <a href="/visit/" class="smcaps text-ink u-link" data-cursor>Visit</a>
     </nav>
-    <a href="https://www.fresha.com/a/blanca-beauty-bar-london-392-clarence-street-zkvszbqf" target="_blank" rel="noopener" class="btn" data-track="book_click" data-track-loc="header">
+    <a href="https://www.fresha.com/a/blanca-beauty-bar-london-392-clarence-street-zkvszbqf" target="_blank" rel="noopener" class="btn-coral hidden md:inline-flex" data-cursor data-track="book_click" data-track-loc="header">
       Book →
     </a>
   </div>
 </header>
 
-<!-- COVER -->
-<section class="bg-paper">
-  <div class="max-w-[1500px] mx-auto px-5 lg:px-10 pt-12 lg:pt-20 pb-12 lg:pb-16">
+<!-- HERO , full-bleed, immersive, kinetic typography -->
+<section class="relative bg-paper" style="min-height: 100vh; padding-top: 100px;">
 
-    <div class="grid grid-cols-12 gap-4 mb-12 lg:mb-16 smcaps text-ink/65">
-      <div class="col-span-6 lg:col-span-3">VOL. VII</div>
-      <div class="col-span-6 lg:col-span-3">№ 1014 reviews · 5.0 ★</div>
-      <div class="hidden lg:block col-span-3">Best in Class · Fresha 2026</div>
-      <div class="hidden lg:block col-span-3 text-right">Spring/Summer 2026</div>
+  <!-- Background editorial photo, big -->
+  <div class="absolute inset-0 overflow-hidden">
+    <img src="media/brand/hero-editorial.jpg" alt="" class="absolute inset-0 w-full h-full object-cover opacity-[0.18]" loading="eager"/>
+    <div class="absolute inset-0" style="background: radial-gradient(ellipse at 70% 35%, rgba(232,85,109,0.10), transparent 60%), linear-gradient(to bottom, rgba(245,237,224,.4), rgba(245,237,224,.85));"></div>
+  </div>
+
+  <div class="relative max-w-[1500px] mx-auto px-5 lg:px-10 pt-12 lg:pt-16 pb-32 lg:pb-40">
+
+    <!-- Eyebrow / scribbled tagline -->
+    <div class="flex flex-wrap items-center gap-x-6 gap-y-3 mb-12 lg:mb-16 rev pre">
+      <span class="smcaps text-ink/70">Russian Manicure · Laser · Lash &amp; Brow</span>
+      <span class="hand text-coral text-3xl lg:text-4xl leading-none" style="font-weight:700;">London Ontario, since 2019.</span>
     </div>
 
-    <h1 class="display text-ink rev pre" style="font-size: clamp(96px, 18vw, 320px);">
-      <span class="block">Blanca</span>
-      <span class="block text-ox" style="margin-left: 0.18em; font-style: italic;">Beauty</span>
-      <span class="block" style="margin-left: 0.36em;">Bar.</span>
+    <!-- The big H1 , letter cascade -->
+    <h1 class="display text-ink relative" style="font-size: clamp(96px, 17vw, 280px); line-height: 0.86;">
+      <span class="block cascade is-in" aria-label="Blanca">
+        <span>B</span><span>l</span><span>a</span><span>n</span><span>c</span><span>a</span>
+      </span>
+      <span class="block cascade is-in italic text-coral" aria-label="Beauty" style="margin-left: 0.18em;">
+        <span>B</span><span>e</span><span>a</span><span>u</span><span>t</span><span>y</span>
+      </span>
+      <span class="block cascade is-in" aria-label="Bar." style="margin-left: 0.36em;">
+        <span>B</span><span>a</span><span>r</span><span>.</span>
+      </span>
     </h1>
 
-    <div class="mt-12 lg:mt-20 grid grid-cols-12 gap-6 lg:gap-12 items-end">
+    <!-- Hero footer info , three cols, intentionally NOT centered -->
+    <div class="mt-16 lg:mt-24 grid grid-cols-12 gap-6 lg:gap-12 items-end">
 
       <div class="col-span-12 lg:col-span-5 rev pre">
-        <p class="smcaps text-ox mb-3">Featuring</p>
-        <p class="serif text-2xl lg:text-3xl text-ink leading-[1.25]">
-          Russian e-file manicure. Diode laser. Yumi keratin lash lift. Brow lamination.
+        <p class="serif text-2xl lg:text-3xl text-ink leading-[1.25] max-w-md">
+          A Russian e-file manicure that lasts <span class="hand text-coral text-4xl lg:text-5xl leading-none" style="font-weight:700;">four to five</span> weeks. <span class="italic">Done properly.</span>
         </p>
       </div>
 
-      <div class="col-span-12 lg:col-span-4 rev pre">
-        <p class="smcaps text-ox mb-3">By appointment</p>
-        <p class="serif text-xl lg:text-2xl text-ink leading-snug">
+      <div class="col-span-12 lg:col-span-3 rev pre">
+        <p class="smcaps text-ink/70 mb-2">Address</p>
+        <p class="serif text-lg text-ink leading-snug">
           392 Clarence Street<br/>
-          Citi Plaza, London Ontario
+          Citi Plaza, London ON
         </p>
       </div>
 
-      <div class="col-span-12 lg:col-span-3 rev pre lg:text-right">
-        <a href="https://www.fresha.com/a/blanca-beauty-bar-london-392-clarence-street-zkvszbqf" target="_blank" rel="noopener" class="btn" data-track="book_click" data-track-loc="cover">
-          Book on Fresha →
+      <div class="col-span-12 lg:col-span-4 rev pre lg:text-right">
+        <a href="https://www.fresha.com/a/blanca-beauty-bar-london-392-clarence-street-zkvszbqf" target="_blank" rel="noopener" class="btn-coral wobble" data-cursor data-track="book_click" data-track-loc="hero">
+          Book a chair →
         </a>
+        <p class="hand text-ink mt-5 text-2xl" style="transform: rotate(-2deg); font-weight: 600;">
+          See you soon ✶
+        </p>
       </div>
 
     </div>
 
   </div>
 
-  <div class="ed-photo aspect-[16/8] lg:aspect-[16/7]">
-    <img src="media/brand/hero-editorial.jpg" alt="Inside Blanca Beauty Bar, a Russian manicure in progress" class="w-full h-full object-cover" loading="eager" fetchpriority="high"/>
-  </div>
-</section>
-
-<!-- TABLE OF CONTENTS -->
-<section class="bg-paper py-20 lg:py-28">
-  <div class="max-w-[1500px] mx-auto px-5 lg:px-10">
-
-    <div class="grid grid-cols-12 gap-4 running-rule py-3 mb-12 lg:mb-16 smcaps">
-      <div class="col-span-6 lg:col-span-3">№ 00</div>
-      <div class="hidden lg:block col-span-6">Inside this issue</div>
-      <div class="col-span-6 lg:col-span-3 text-right">Page 4</div>
-    </div>
-
-    <div class="grid grid-cols-12 gap-x-8 lg:gap-x-16 gap-y-8 lg:gap-y-12">
-
-      <a href="/about/" class="col-span-12 md:col-span-6 lg:col-span-3 group rev pre">
-        <div class="flex items-baseline justify-between mb-3 pb-2 border-b border-ink/30 group-hover:border-ox transition">
-          <span class="numeral text-2xl">i.</span>
-          <span class="smcaps text-ink/60 group-hover:text-ox transition">p. 7</span>
-        </div>
-        <p class="display text-ink text-3xl lg:text-4xl leading-[0.95] group-hover:text-ox transition">A note,<br/><span class="italic">from the chair.</span></p>
-        <p class="serif text-ink/70 text-base mt-3">About Buthyna and the studio.</p>
-      </a>
-
-      <a href="/services/russian-manicure/" class="col-span-12 md:col-span-6 lg:col-span-3 group rev pre">
-        <div class="flex items-baseline justify-between mb-3 pb-2 border-b border-ink/30 group-hover:border-ox transition">
-          <span class="numeral text-2xl">ii.</span>
-          <span class="smcaps text-ink/60 group-hover:text-ox transition">p. 14</span>
-        </div>
-        <p class="display text-ink text-3xl lg:text-4xl leading-[0.95] group-hover:text-ox transition">The Russian<br/><span class="italic">manicure.</span></p>
-        <p class="serif text-ink/70 text-base mt-3">Dry e-file. Four to five weeks.</p>
-      </a>
-
-      <a href="/services/laser/" class="col-span-12 md:col-span-6 lg:col-span-3 group rev pre">
-        <div class="flex items-baseline justify-between mb-3 pb-2 border-b border-ink/30 group-hover:border-ox transition">
-          <span class="numeral text-2xl">iii.</span>
-          <span class="smcaps text-ink/60 group-hover:text-ox transition">p. 22</span>
-        </div>
-        <p class="display text-ink text-3xl lg:text-4xl leading-[0.95] group-hover:text-ox transition">Diode<br/><span class="italic">laser.</span></p>
-        <p class="serif text-ink/70 text-base mt-3">Every skin type. From $59.</p>
-      </a>
-
-      <a href="/services/lash-brow/" class="col-span-12 md:col-span-6 lg:col-span-3 group rev pre">
-        <div class="flex items-baseline justify-between mb-3 pb-2 border-b border-ink/30 group-hover:border-ox transition">
-          <span class="numeral text-2xl">iv.</span>
-          <span class="smcaps text-ink/60 group-hover:text-ox transition">p. 28</span>
-        </div>
-        <p class="display text-ink text-3xl lg:text-4xl leading-[0.95] group-hover:text-ox transition">Lash<br/><span class="italic">&amp; brow.</span></p>
-        <p class="serif text-ink/70 text-base mt-3">Yumi lift. Lamination.</p>
-      </a>
-
-    </div>
-
+  <!-- Scroll cue -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 float">
+    <p class="smcaps text-ink/60">scroll</p>
   </div>
 </section>
 
-<!-- INDEX / NUMBERS -->
-<section class="bg-paper py-12 lg:py-16 running-rule">
-  <div class="max-w-[1500px] mx-auto px-5 lg:px-10">
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-6">
-      <div>
-        <p class="numeral" style="font-size: clamp(72px, 8vw, 128px);">5.0</p>
-        <p class="smcaps text-ink/65 mt-2">Average rating</p>
-      </div>
-      <div>
-        <p class="numeral" style="font-size: clamp(72px, 8vw, 128px);">1,014</p>
-        <p class="smcaps text-ink/65 mt-2">Five-star reviews</p>
-      </div>
-      <div>
-        <p class="numeral" style="font-size: clamp(72px, 8vw, 128px);">7+ <span class="text-[0.4em]">yr</span></p>
-        <p class="smcaps text-ink/65 mt-2">On Clarence Street</p>
-      </div>
-      <div>
-        <p class="numeral" style="font-size: clamp(72px, 8vw, 128px);">250+</p>
-        <p class="smcaps text-ink/65 mt-2">Gel colours on the wall</p>
-      </div>
+<!-- INFINITE NAIL MARQUEE , replaces dead "1014 reviews" facts bar -->
+<section class="bg-ink py-3 overflow-hidden border-y border-ink">
+  <div class="marquee">
+    <div class="marquee-track">
+      <span class="display text-cream italic px-8 whitespace-nowrap" style="font-size: 56px;">1,014 five-star reviews</span>
+      <span class="text-coral px-4 self-center" style="font-size: 28px;">✶</span>
+      <span class="display text-cream italic px-8 whitespace-nowrap" style="font-size: 56px;">Russian Manicure since 2019</span>
+      <span class="text-coral px-4 self-center" style="font-size: 28px;">✶</span>
+      <span class="display text-cream italic px-8 whitespace-nowrap" style="font-size: 56px;">Best in Class · Fresha 2026</span>
+      <span class="text-coral px-4 self-center" style="font-size: 28px;">✶</span>
+      <span class="display text-cream italic px-8 whitespace-nowrap" style="font-size: 56px;">250+ gel colours</span>
+      <span class="text-coral px-4 self-center" style="font-size: 28px;">✶</span>
+      <span class="display text-cream italic px-8 whitespace-nowrap" style="font-size: 56px;">Diode laser · every skin type</span>
+      <span class="text-coral px-4 self-center" style="font-size: 28px;">✶</span>
+    </div>
+    <div class="marquee-track" aria-hidden="true">
+      <span class="display text-cream italic px-8 whitespace-nowrap" style="font-size: 56px;">1,014 five-star reviews</span>
+      <span class="text-coral px-4 self-center" style="font-size: 28px;">✶</span>
+      <span class="display text-cream italic px-8 whitespace-nowrap" style="font-size: 56px;">Russian Manicure since 2019</span>
+      <span class="text-coral px-4 self-center" style="font-size: 28px;">✶</span>
+      <span class="display text-cream italic px-8 whitespace-nowrap" style="font-size: 56px;">Best in Class · Fresha 2026</span>
+      <span class="text-coral px-4 self-center" style="font-size: 28px;">✶</span>
+      <span class="display text-cream italic px-8 whitespace-nowrap" style="font-size: 56px;">250+ gel colours</span>
+      <span class="text-coral px-4 self-center" style="font-size: 28px;">✶</span>
+      <span class="display text-cream italic px-8 whitespace-nowrap" style="font-size: 56px;">Diode laser · every skin type</span>
+      <span class="text-coral px-4 self-center" style="font-size: 28px;">✶</span>
     </div>
   </div>
 </section>
 
-<!-- FOUNDER NOTE -->
-<section class="bg-paper py-24 lg:py-36">
+<!-- MEET BUTHYNA , handwritten, scribbled, real -->
+<section class="bg-paper py-24 lg:py-40 relative">
   <div class="max-w-[1500px] mx-auto px-5 lg:px-10">
 
-    <div class="grid grid-cols-12 gap-4 running-rule py-3 mb-12 lg:mb-20 smcaps">
-      <div class="col-span-6 lg:col-span-3">№ 01</div>
-      <div class="hidden lg:block col-span-6">A note from the founder</div>
-      <div class="col-span-6 lg:col-span-3 text-right">Page 7</div>
-    </div>
+    <div class="grid grid-cols-12 gap-8 lg:gap-16 items-center">
 
-    <div class="grid grid-cols-12 gap-8 lg:gap-16 items-start">
-
-      <div class="col-span-12 lg:col-span-4 rev pre">
-        <figure class="ed-photo aspect-[4/5]">
-          <img src="media/brand/buthyna-founder.jpg" alt="Buthyna Abu-Deyah, founder of Blanca Beauty Bar" class="w-full h-full object-cover" loading="lazy"/>
+      <div class="col-span-12 lg:col-span-5 rev pre relative">
+        <figure class="relative">
+          <img src="media/brand/buthyna-founder.jpg" alt="Buthyna Abu-Deyah" class="w-full aspect-[4/5] object-cover" style="border-radius: 50% 50% 12px 12px;" loading="lazy"/>
+          <!-- Handwritten annotation -->
+          <p class="hand absolute -top-6 -right-4 lg:-right-12 text-coral leading-none rotate-6 z-10" style="font-size: 64px; font-weight: 700;">
+            ← That's me.
+          </p>
         </figure>
-        <p class="smcaps text-ink/60 mt-4">Buthyna Abu-Deyah</p>
-        <p class="serif italic text-ink/75 text-base mt-1">Founder, Blanca Beauty Bar</p>
       </div>
 
-      <div class="col-span-12 lg:col-span-8 rev pre">
-        <h2 class="display text-ink mb-10 lg:mb-12" style="font-size: clamp(56px, 8vw, 128px);">
-          A note,<br/><span class="text-ox" style="font-style: italic;">from the chair.</span>
+      <div class="col-span-12 lg:col-span-7 rev pre lg:pl-8">
+        <p class="smcaps text-coral mb-5">A note from the chair</p>
+        <h2 class="display text-ink mb-10" style="font-size: clamp(56px, 8vw, 130px);">
+          Hi, I'm <span class="italic text-coral">Buthyna.</span>
         </h2>
 
-        <p class="serif text-xl lg:text-2xl text-ink leading-[1.45] dropcap">
-          Blanca Beauty was founded with a singular aim: to elevate the nail salon experience. Every detail has been refined from beginning to end, so each appointment delivers a finish you can trust.
+        <p class="serif text-2xl lg:text-3xl text-ink leading-[1.4]">
+          I opened Blanca in <span class="italic">2019</span> with one rule: a Russian manicure should leave the chair looking flawless and stay that way for <span class="hand text-coral text-4xl lg:text-5xl" style="font-weight:700;">four to five weeks.</span>
         </p>
 
-        <p class="serif text-lg lg:text-xl text-ink/80 leading-[1.55] mt-6 max-w-3xl">
-          Seven years in. Same standard. Same chair on Clarence Street. Maryam and I have trained in the Russian e-file method since 2019, and the studio is built around that craft. The work that leaves this room is meant to last four to five weeks. That's the only thing we sell.
+        <p class="serif text-xl lg:text-2xl text-ink/80 mt-6 leading-[1.5]">
+          Maryam and I trained in the technique. We work dry , no soaking, no cutting. Tools are autoclave-sterilized between every client. Coffee or tea on arrival. The room stays calm on purpose.
         </p>
 
-        <p class="hand text-ox mt-12" style="font-size: clamp(60px, 7vw, 96px); transform: rotate(-3deg); line-height: 1; font-weight: 700;">
-          Buthyna xo
+        <p class="serif text-xl lg:text-2xl text-ink/80 mt-6 leading-[1.5]">
+          Seven years in. Same chair. Same standard.
         </p>
 
-        <a href="/about/" class="smcaps text-ink h-link mt-10 inline-flex items-center gap-2">
-          Read more about Blanca →
-        </a>
+        <p class="hand text-ink mt-10" style="font-size: clamp(56px, 6vw, 88px); transform: rotate(-3deg); font-weight: 700; line-height: 1;">
+          Buthyna <span class="text-coral">xo</span>
+        </p>
+
+        <a href="/about/" class="smcaps text-ink u-link mt-10 inline-block" data-cursor>Read more about Blanca →</a>
 
       </div>
 
@@ -359,24 +460,179 @@
   </div>
 </section>
 
-<!-- LOOKBOOK TEASE -->
-<section class="bg-paper py-24 lg:py-32">
-  <div class="max-w-[1500px] mx-auto px-5 lg:px-10 mb-12 lg:mb-16">
+<!-- THE TECHNIQUE , sequential, illustrated, scrolly -->
+<section class="bg-cream py-24 lg:py-36 border-y border-ink/10">
+  <div class="max-w-[1500px] mx-auto px-5 lg:px-10">
 
-    <div class="grid grid-cols-12 gap-4 running-rule py-3 mb-12 smcaps">
-      <div class="col-span-6 lg:col-span-3">№ 04</div>
-      <div class="hidden lg:block col-span-6">Lookbook · Recent work</div>
-      <div class="col-span-6 lg:col-span-3 text-right">Page 30</div>
+    <div class="text-center max-w-3xl mx-auto mb-20 lg:mb-28 rev pre">
+      <p class="smcaps text-coral mb-5">How it works</p>
+      <h2 class="heavy text-ink" style="font-size: clamp(56px, 8vw, 130px);">
+        The Russian<br/>method.
+      </h2>
+      <p class="serif text-xl lg:text-2xl text-ink/75 mt-8 leading-relaxed">
+        Five steps. <span class="hand text-coral text-3xl lg:text-4xl" style="font-weight:700;">No water.</span> No cutting. Done properly.
+      </p>
     </div>
 
+    <!-- Step 1 -->
+    <div class="grid grid-cols-12 gap-6 lg:gap-12 items-center mb-32 lg:mb-40 rev pre">
+      <div class="col-span-12 lg:col-span-5 lg:order-2">
+        <figure class="aspect-[4/5] overflow-hidden" style="border-radius: 50% 50% 12px 12px; background: #EBDFCB;">
+          <img src="media/brand/espresso-moment.jpg" alt="A client sips espresso while a manicure begins" class="w-full h-full object-cover" loading="lazy"/>
+        </figure>
+      </div>
+      <div class="col-span-12 lg:col-span-7 lg:pr-8 lg:order-1">
+        <p class="step-num" style="font-size: clamp(120px, 14vw, 240px);">01</p>
+        <h3 class="display text-ink mt-2 mb-6" style="font-size: clamp(40px, 5vw, 80px);">
+          You walk in. <span class="italic text-coral">Coffee or tea?</span>
+        </h3>
+        <p class="serif text-xl text-ink/80 leading-[1.55] max-w-xl">
+          We greet you, take your jacket, sit you at the chair. The room is small, calm, and on purpose quiet. Espresso, herbal tea , your choice while we set up.
+        </p>
+      </div>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="grid grid-cols-12 gap-6 lg:gap-12 items-center mb-32 lg:mb-40 rev pre">
+      <div class="col-span-12 lg:col-span-5">
+        <figure class="aspect-[4/5] overflow-hidden" style="border-radius: 50% 50% 12px 12px; background: #EBDFCB;">
+          <img src="media/brand/nail-tools.jpg" alt="Sterilised nail tools laid out on a workstation" class="w-full h-full object-cover" loading="lazy"/>
+        </figure>
+      </div>
+      <div class="col-span-12 lg:col-span-7 lg:pl-8">
+        <p class="step-num" style="font-size: clamp(120px, 14vw, 240px);">02</p>
+        <h3 class="display text-ink mt-2 mb-6" style="font-size: clamp(40px, 5vw, 80px);">
+          Sterile <span class="italic text-coral">tools</span> come out.
+        </h3>
+        <p class="serif text-xl text-ink/80 leading-[1.55] max-w-xl">
+          Every reusable tool is autoclave-sterilized between clients , the same standard used on surgical instruments. Single-use abrasives are opened in front of you and disposed of after.
+        </p>
+      </div>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="grid grid-cols-12 gap-6 lg:gap-12 items-center mb-32 lg:mb-40 rev pre">
+      <div class="col-span-12 lg:col-span-5 lg:order-2">
+        <figure class="aspect-[4/5] overflow-hidden" style="border-radius: 50% 50% 12px 12px; background: #EBDFCB;">
+          <img src="media/brand/method-portrait.jpg" alt="Buthyna performing a Russian e-file manicure" class="w-full h-full object-cover" loading="lazy"/>
+        </figure>
+      </div>
+      <div class="col-span-12 lg:col-span-7 lg:pr-8 lg:order-1">
+        <p class="step-num" style="font-size: clamp(120px, 14vw, 240px);">03</p>
+        <h3 class="display text-ink mt-2 mb-6" style="font-size: clamp(40px, 5vw, 80px);">
+          The <span class="italic text-coral">e-file</span>, dry.
+        </h3>
+        <p class="serif text-xl text-ink/80 leading-[1.55] max-w-xl">
+          No soaking. The cuticle is gently lifted and refined with a professional rotary tool. Never cut. Better for nail health, better for retention.
+        </p>
+      </div>
+    </div>
+
+    <!-- Step 4 -->
+    <div class="grid grid-cols-12 gap-6 lg:gap-12 items-center mb-32 lg:mb-40 rev pre">
+      <div class="col-span-12 lg:col-span-5">
+        <figure class="aspect-[4/5] overflow-hidden" style="border-radius: 50% 50% 12px 12px; background: #EBDFCB;">
+          <img src="media/client/nail-spring-sets.jpg" alt="Pink chrome glass spring set" class="w-full h-full object-cover" loading="lazy"/>
+        </figure>
+      </div>
+      <div class="col-span-12 lg:col-span-7 lg:pl-8">
+        <p class="step-num" style="font-size: clamp(120px, 14vw, 240px);">04</p>
+        <h3 class="display text-ink mt-2 mb-6" style="font-size: clamp(40px, 5vw, 80px);">
+          Pick your <span class="italic text-coral">colour.</span>
+        </h3>
+        <p class="serif text-xl text-ink/80 leading-[1.55] max-w-xl">
+          250+ gel shades on the wall. Bring an inspo photo or pick something on the day. Gel is applied flush against the skin, sealed at the cuticle line.
+        </p>
+      </div>
+    </div>
+
+    <!-- Step 5 -->
+    <div class="grid grid-cols-12 gap-6 lg:gap-12 items-center rev pre">
+      <div class="col-span-12 lg:col-span-5 lg:order-2">
+        <figure class="aspect-[4/5] overflow-hidden" style="border-radius: 50% 50% 12px 12px; background: #EBDFCB;">
+          <img src="media/client/nail-chrome-glass.jpg" alt="A finished Russian manicure set" class="w-full h-full object-cover" loading="lazy"/>
+        </figure>
+      </div>
+      <div class="col-span-12 lg:col-span-7 lg:pr-8 lg:order-1">
+        <p class="step-num" style="font-size: clamp(120px, 14vw, 240px);">05</p>
+        <h3 class="display text-ink mt-2 mb-6" style="font-size: clamp(40px, 5vw, 80px);">
+          See you in <span class="italic text-coral">four to five weeks.</span>
+        </h3>
+        <p class="serif text-xl text-ink/80 leading-[1.55] max-w-xl">
+          Cured, sealed, oiled. The set is meant to look fresh at week four. Most clients come back at week five for the next.
+        </p>
+        <a href="https://www.fresha.com/a/blanca-beauty-bar-london-392-clarence-street-zkvszbqf" target="_blank" rel="noopener" class="btn-coral mt-8 wobble" data-cursor data-track="book_click" data-track-loc="technique-cta">
+          Book yours →
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- THE WALL , interactive polish swatch wall -->
+<section class="py-24 lg:py-36 overflow-hidden" style="background: linear-gradient(180deg, #F5EDE0 0%, #FFF8EB 100%);">
+  <div class="max-w-[1500px] mx-auto px-5 lg:px-10 mb-16 lg:mb-20">
+    <div class="text-center max-w-3xl mx-auto rev pre">
+      <p class="smcaps text-coral mb-5">The wall</p>
+      <h2 class="heavy text-ink" style="font-size: clamp(56px, 9vw, 140px);">
+        250+ shades.<br/><span class="italic text-coral">Pick one.</span>
+      </h2>
+      <p class="serif text-xl text-ink/75 mt-8 leading-relaxed">
+        Drag to scroll the wall.
+      </p>
+    </div>
+  </div>
+
+  <div class="gallery-row pb-12">
+    <div class="gallery-track" style="padding: 30px 5vw;">
+      <div class="wall-card" style="background: #EFD9D9;"><span>Soft Pink</span></div>
+      <div class="wall-card" style="background: #C8385E;"><span>Bold Red</span></div>
+      <div class="wall-card" style="background: #1A1715;"><span style="color:#FFF8EB;">Black Velvet</span></div>
+      <div class="wall-card" style="background: #F2D7C3;"><span>Cream Nude</span></div>
+      <div class="wall-card" style="background: #E8556D;"><span>Raspberry</span></div>
+      <div class="wall-card" style="background: #8B6F47;"><span style="color:#FFF8EB;">Espresso</span></div>
+      <div class="wall-card" style="background: #B5BFA7;"><span>Sage</span></div>
+      <div class="wall-card" style="background: #FCE5D5;"><span>Peach Blossom</span></div>
+      <div class="wall-card" style="background: #E0CDF2;"><span>Lilac</span></div>
+      <div class="wall-card" style="background: #6B2027;"><span style="color:#FFF8EB;">Oxblood</span></div>
+      <div class="wall-card" style="background: #B89248;"><span style="color:#FFF8EB;">Antique Gold</span></div>
+      <div class="wall-card" style="background: #2E3D52;"><span style="color:#FFF8EB;">Navy</span></div>
+      <div class="wall-card" style="background: #FFFFFF;"><span>Ivory</span></div>
+      <div class="wall-card" style="background: #C9A5BD;"><span>Mauve</span></div>
+      <div class="wall-card" style="background: #4F2C42;"><span style="color:#FFF8EB;">Plum</span></div>
+      <div class="wall-card" style="background: #FAD9C5;"><span>Bare</span></div>
+      <div class="wall-card" style="background: #DA5BA0;"><span style="color:#FFF8EB;">Pink Magenta</span></div>
+      <div class="wall-card" style="background: #4A6253;"><span style="color:#FFF8EB;">Forest</span></div>
+      <div class="wall-card" style="background: #F5C5C5;"><span>Ballet</span></div>
+      <div class="wall-card" style="background: #E8556D;"><span style="color:#FFF8EB;">Rouge</span></div>
+      <!-- duplicate for seamless loop -->
+      <div class="wall-card" style="background: #EFD9D9;"><span>Soft Pink</span></div>
+      <div class="wall-card" style="background: #C8385E;"><span>Bold Red</span></div>
+      <div class="wall-card" style="background: #1A1715;"><span style="color:#FFF8EB;">Black Velvet</span></div>
+      <div class="wall-card" style="background: #F2D7C3;"><span>Cream Nude</span></div>
+      <div class="wall-card" style="background: #E8556D;"><span>Raspberry</span></div>
+      <div class="wall-card" style="background: #8B6F47;"><span style="color:#FFF8EB;">Espresso</span></div>
+      <div class="wall-card" style="background: #B5BFA7;"><span>Sage</span></div>
+      <div class="wall-card" style="background: #FCE5D5;"><span>Peach Blossom</span></div>
+      <div class="wall-card" style="background: #E0CDF2;"><span>Lilac</span></div>
+      <div class="wall-card" style="background: #6B2027;"><span style="color:#FFF8EB;">Oxblood</span></div>
+    </div>
+  </div>
+
+  <p class="text-center smcaps text-ink/60 mt-12">A small selection of the 250+ shades on the wall</p>
+
+</section>
+
+<!-- LOOKBOOK -->
+<section class="bg-paper py-24 lg:py-36">
+  <div class="max-w-[1500px] mx-auto px-5 lg:px-10 mb-12 lg:mb-16">
     <div class="grid grid-cols-12 gap-6 items-end">
-      <h2 class="display col-span-12 lg:col-span-8 text-ink rev pre" style="font-size: clamp(72px, 11vw, 200px);">
-        Recent <span class="italic text-ox">work.</span>
+      <h2 class="display text-ink col-span-12 lg:col-span-8 rev pre" style="font-size: clamp(72px, 11vw, 200px);">
+        Recent <span class="italic text-coral">work.</span>
       </h2>
       <div class="col-span-12 lg:col-span-4 lg:text-right rev pre">
-        <a href="/lookbook/" class="smcaps text-ink h-link inline-flex items-center gap-2">
-          Open the full lookbook →
-        </a>
+        <a href="/lookbook/" class="smcaps text-ink u-link" data-cursor>Open the full lookbook →</a>
       </div>
     </div>
   </div>
@@ -394,7 +650,6 @@
       <div class="gallery-card"><img src="media/client/nail-red-almond.jpg" alt="Red almond" loading="lazy"/></div>
       <div class="gallery-card tall"><img src="media/client/nail-autumn.jpg" alt="Autumn" loading="lazy"/></div>
       <div class="gallery-card"><img src="media/client/nail-nude-almond.jpg" alt="Nude almond" loading="lazy"/></div>
-      <!-- duplicate for seamless loop -->
       <div class="gallery-card"><img src="media/client/nail-navy-french.jpg" alt="" loading="lazy"/></div>
       <div class="gallery-card tall"><img src="media/client/nail-spring-sets.jpg" alt="" loading="lazy"/></div>
       <div class="gallery-card"><img src="media/client/nail-summer-swirl.jpg" alt="" loading="lazy"/></div>
@@ -402,195 +657,213 @@
       <div class="gallery-card"><img src="media/client/nail-chrome-glass.jpg" alt="" loading="lazy"/></div>
       <div class="gallery-card tall"><img src="media/client/nail-floral.jpg" alt="" loading="lazy"/></div>
       <div class="gallery-card"><img src="media/client/nail-eclectic.jpg" alt="" loading="lazy"/></div>
-      <div class="gallery-card wide"><img src="media/client/nail-mixed-art.jpg" alt="" loading="lazy"/></div>
-      <div class="gallery-card"><img src="media/client/nail-red-almond.jpg" alt="" loading="lazy"/></div>
-      <div class="gallery-card tall"><img src="media/client/nail-autumn.jpg" alt="" loading="lazy"/></div>
-      <div class="gallery-card"><img src="media/client/nail-nude-almond.jpg" alt="" loading="lazy"/></div>
     </div>
   </div>
 </section>
 
-<!-- HEARD -->
-<section class="bg-paperdk py-24 lg:py-36">
+<!-- THE MENU , minimal, hover-driven -->
+<section class="bg-cream py-24 lg:py-36 border-y border-ink/10">
+  <div class="max-w-[1300px] mx-auto px-5 lg:px-10">
+
+    <div class="text-center mb-16 lg:mb-20 rev pre">
+      <p class="smcaps text-coral mb-5">The menu</p>
+      <h2 class="heavy text-ink" style="font-size: clamp(56px, 8vw, 130px);">
+        What we <span class="italic text-coral">do.</span>
+      </h2>
+    </div>
+
+    <div class="rev pre">
+      <a href="https://www.fresha.com/a/blanca-beauty-bar-london-392-clarence-street-zkvszbqf" target="_blank" rel="noopener" class="menu-row block py-7 grid grid-cols-12 items-baseline gap-4" data-cursor data-track="book_click" data-track-loc="menu-mani">
+        <p class="col-span-12 md:col-span-7 display text-3xl lg:text-5xl text-ink">Russian E-File Manicure</p>
+        <p class="col-span-6 md:col-span-3 smcaps text-ink/65">1 hour</p>
+        <p class="col-span-6 md:col-span-2 serif text-2xl text-ink text-right">from $85 <span class="arrow">→</span></p>
+      </a>
+      <a href="https://www.fresha.com/a/blanca-beauty-bar-london-392-clarence-street-zkvszbqf" target="_blank" rel="noopener" class="menu-row block py-7 grid grid-cols-12 items-baseline gap-4" data-cursor data-track="book_click" data-track-loc="menu-pedi">
+        <p class="col-span-12 md:col-span-7 display text-3xl lg:text-5xl text-ink">Russian E-File Pedicure</p>
+        <p class="col-span-6 md:col-span-3 smcaps text-ink/65">~ 1 hr 5 m</p>
+        <p class="col-span-6 md:col-span-2 serif text-2xl text-ink text-right">from $60 <span class="arrow">→</span></p>
+      </a>
+      <a href="/services/laser/" class="menu-row block py-7 grid grid-cols-12 items-baseline gap-4" data-cursor>
+        <p class="col-span-12 md:col-span-7 display text-3xl lg:text-5xl text-ink">Diode Laser Hair Removal</p>
+        <p class="col-span-6 md:col-span-3 smcaps text-ink/65">every skin type</p>
+        <p class="col-span-6 md:col-span-2 serif text-2xl text-ink text-right">from $59 <span class="arrow">→</span></p>
+      </a>
+      <a href="https://www.fresha.com/a/blanca-beauty-bar-london-392-clarence-street-zkvszbqf" target="_blank" rel="noopener" class="menu-row block py-7 grid grid-cols-12 items-baseline gap-4" data-cursor data-track="book_click" data-track-loc="menu-yumi">
+        <p class="col-span-12 md:col-span-7 display text-3xl lg:text-5xl text-ink">Yumi Keratin Lash Lift™</p>
+        <p class="col-span-6 md:col-span-3 smcaps text-ink/65">8–12 wk wear</p>
+        <p class="col-span-6 md:col-span-2 serif text-2xl text-ink text-right">from $125 <span class="arrow">→</span></p>
+      </a>
+      <a href="https://www.fresha.com/a/blanca-beauty-bar-london-392-clarence-street-zkvszbqf" target="_blank" rel="noopener" class="menu-row block py-7 grid grid-cols-12 items-baseline gap-4" data-cursor data-track="book_click" data-track-loc="menu-brow">
+        <p class="col-span-12 md:col-span-7 display text-3xl lg:text-5xl text-ink">Brow Lamination</p>
+        <p class="col-span-6 md:col-span-3 smcaps text-ink/65">40 min</p>
+        <p class="col-span-6 md:col-span-2 serif text-2xl text-ink text-right">from $65 <span class="arrow">→</span></p>
+      </a>
+    </div>
+
+    <p class="text-center mt-12 smcaps text-ink/60">Pricing pulled from Fresha. Tap any row to book.</p>
+  </div>
+</section>
+
+<!-- VOICES , animated review cards -->
+<section class="bg-paper py-24 lg:py-36">
   <div class="max-w-[1500px] mx-auto px-5 lg:px-10">
 
-    <div class="grid grid-cols-12 gap-4 running-rule py-3 mb-12 lg:mb-16 smcaps">
-      <div class="col-span-6 lg:col-span-3">№ 05</div>
-      <div class="hidden lg:block col-span-6">Heard · From the chair</div>
-      <div class="col-span-6 lg:col-span-3 text-right">Page 38</div>
+    <div class="text-center max-w-3xl mx-auto mb-16 lg:mb-24 rev pre">
+      <p class="smcaps text-coral mb-5">Voices</p>
+      <h2 class="heavy text-ink" style="font-size: clamp(56px, 8vw, 130px);">
+        Five <span class="italic text-coral">stars.</span><br/>1,014 times.
+      </h2>
     </div>
 
-    <div class="grid grid-cols-12 gap-8 lg:gap-16">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-12 max-w-6xl mx-auto">
 
-      <figure class="col-span-12 lg:col-span-7 rev pre">
-        <p class="text-ox numeral" style="font-size: clamp(140px, 16vw, 260px);">"</p>
-        <p class="pullquote text-ink mt-[-3rem] lg:mt-[-5rem]" style="font-size: clamp(34px, 4.6vw, 64px);">
-          This is my favourite nail set <em>I've ever received.</em> The atmosphere is so calm, you're offered a complimentary drink, and she is so precise with her work.
+      <figure class="rev pre relative">
+        <p class="hand text-coral text-7xl lg:text-8xl leading-none mb-3" style="font-weight:700;">"</p>
+        <p class="serif italic text-ink text-xl lg:text-2xl leading-[1.45]">
+          This is my favourite nail set I've ever received. The atmosphere is so calm, you're offered a complimentary drink, and she is so precise with her work.
         </p>
-        <figcaption class="smcaps text-ink/60 mt-8 ml-1">Emma Z · Russian E-File</figcaption>
+        <figcaption class="hand text-coral text-2xl lg:text-3xl mt-6" style="font-weight:700;">, Emma Z</figcaption>
       </figure>
 
-      <div class="col-span-12 lg:col-span-5 space-y-12 rev pre">
+      <figure class="rev pre relative">
+        <p class="hand text-coral text-7xl lg:text-8xl leading-none mb-3" style="font-weight:700;">"</p>
+        <p class="serif italic text-ink text-xl lg:text-2xl leading-[1.45]">
+          Always a 10/10 when I visit Blanca. Buthyna and her team of skilled professionals are welcoming and deliver unmatched excellence of service.
+        </p>
+        <figcaption class="hand text-coral text-2xl lg:text-3xl mt-6" style="font-weight:700;">, Laura C</figcaption>
+      </figure>
 
-        <figure>
-          <p class="serif italic text-xl lg:text-2xl text-ink leading-[1.45]">
-            "Always a 10/10 when I visit Blanca. Buthyna and her team of skilled professionals are welcoming and deliver unmatched excellence of service."
-          </p>
-          <figcaption class="smcaps text-ink/55 mt-4">Laura C</figcaption>
-        </figure>
-
-        <figure>
-          <p class="serif italic text-xl lg:text-2xl text-ink leading-[1.45]">
-            "Before I began having my nails done at Blanca, I really did not know how beautiful an exceptional manicure could make my hands look."
-          </p>
-          <figcaption class="smcaps text-ink/55 mt-4">Laura C</figcaption>
-        </figure>
-
-        <figure>
-          <p class="serif italic text-xl lg:text-2xl text-ink leading-[1.45]">
-            "Maryam is amazing! Every time I show her my nail inspo, she somehow makes it even better."
-          </p>
-          <figcaption class="smcaps text-ink/55 mt-4">Pearl A</figcaption>
-        </figure>
-
-      </div>
+      <figure class="rev pre relative">
+        <p class="hand text-coral text-7xl lg:text-8xl leading-none mb-3" style="font-weight:700;">"</p>
+        <p class="serif italic text-ink text-xl lg:text-2xl leading-[1.45]">
+          Maryam is amazing! Every time I show her my nail inspo, she somehow makes it even better.
+        </p>
+        <figcaption class="hand text-coral text-2xl lg:text-3xl mt-6" style="font-weight:700;">, Pearl A</figcaption>
+      </figure>
 
     </div>
 
-    <p class="mt-16 text-center smcaps">
-      <a href="https://www.fresha.com/a/blanca-beauty-bar-london-392-clarence-street-zkvszbqf?reviews=true" target="_blank" rel="noopener" class="text-ink h-link">
+    <p class="text-center mt-16 smcaps">
+      <a href="https://www.fresha.com/a/blanca-beauty-bar-london-392-clarence-street-zkvszbqf?reviews=true" target="_blank" rel="noopener" class="text-ink u-link" data-cursor>
         Read all 1,014 reviews on Fresha →
       </a>
+    </p>
+  </div>
+</section>
+
+<!-- THE DOOR , final CTA -->
+<section class="bg-ink text-cream py-32 lg:py-44 relative overflow-hidden">
+
+  <div class="absolute inset-0 opacity-30">
+    <img src="media/brand/studio-wide.jpg" alt="" class="w-full h-full object-cover"/>
+  </div>
+
+  <div class="relative max-w-[1500px] mx-auto px-5 lg:px-10 text-center">
+
+    <p class="smcaps text-coral mb-8 rev pre">Visit</p>
+    <h2 class="display rev pre" style="font-size: clamp(80px, 14vw, 240px); line-height: 0.88;">
+      The chair<br/>is <span class="italic" style="color:#E8556D;">yours.</span>
+    </h2>
+
+    <p class="serif text-xl lg:text-2xl text-cream/85 mt-12 max-w-xl mx-auto leading-relaxed rev pre">
+      392 Clarence Street, Citi Plaza, London Ontario.<br/>
+      Wednesday through Sunday, by appointment.<br/>
+      Coffee or tea on the house.
+    </p>
+
+    <div class="mt-14 flex items-center justify-center gap-4 flex-wrap rev pre">
+      <a href="https://www.fresha.com/a/blanca-beauty-bar-london-392-clarence-street-zkvszbqf" target="_blank" rel="noopener" class="btn-coral wobble" data-cursor data-track="book_click" data-track-loc="door">
+        Book on Fresha →
+      </a>
+      <a href="tel:+15196302272" class="btn-out" style="border-color: rgba(255,248,235,.4); color:#FFF8EB;" data-cursor data-track="phone_click">
+        Call (519) 630-2272
+      </a>
+    </div>
+
+    <p class="hand text-coral mt-14 rev pre" style="font-size: clamp(56px, 6vw, 96px); transform: rotate(-3deg); font-weight: 700;">
+      See you on Clarence ✶
     </p>
 
   </div>
 </section>
 
-<!-- VISIT TEASER -->
-<section class="bg-paper py-24 lg:py-32">
+<!-- FOOTER -->
+<footer class="bg-paper text-ink py-16 lg:py-24" style="border-top: 1px solid rgba(26,23,21,.1);">
   <div class="max-w-[1500px] mx-auto px-5 lg:px-10">
 
-    <div class="grid grid-cols-12 gap-4 running-rule py-3 mb-12 lg:mb-16 smcaps">
-      <div class="col-span-6 lg:col-span-3">№ 06</div>
-      <div class="hidden lg:block col-span-6">Visit · 392 Clarence Street</div>
-      <div class="col-span-6 lg:col-span-3 text-right">Page 46</div>
-    </div>
-
-    <div class="grid grid-cols-12 gap-8 lg:gap-16 items-center">
-      <div class="col-span-12 lg:col-span-7 rev pre">
-        <h2 class="display text-ink" style="font-size: clamp(72px, 11vw, 200px);">
-          Three-ninety-<br/><span class="italic text-ox">two.</span>
-        </h2>
-        <p class="serif text-lg lg:text-xl text-ink/75 mt-8 leading-relaxed max-w-md">
-          Wednesday through Sunday on Clarence Street, in Citi Plaza, downtown London Ontario. Closed Monday and Tuesday.
-        </p>
-        <div class="mt-10 flex items-center gap-3 flex-wrap">
-          <a href="https://www.fresha.com/a/blanca-beauty-bar-london-392-clarence-street-zkvszbqf" target="_blank" rel="noopener" class="btn" data-track="book_click" data-track-loc="visit-tease">
-            Book on Fresha →
-          </a>
-          <a href="/visit/" class="btn-out">
-            Hours &amp; directions →
-          </a>
-        </div>
-      </div>
-
-      <div class="col-span-12 lg:col-span-5 rev pre">
-        <figure class="ed-photo aspect-[4/5]">
-          <img src="media/brand/studio-wide.jpg" alt="The Blanca Beauty Bar studio interior" class="w-full h-full object-cover" loading="lazy"/>
-        </figure>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- COLOPHON / FOOTER -->
-<footer class="bg-ink text-paper">
-  <div class="max-w-[1500px] mx-auto px-5 lg:px-10 py-16 lg:py-24">
-
-    <div class="grid grid-cols-12 gap-4 py-3 mb-10 lg:mb-14 smcaps text-paper/55" style="border-top: 1.5px solid rgba(239,231,214,.2); border-bottom: 1.5px solid rgba(239,231,214,.2);">
-      <div class="col-span-6 lg:col-span-3">Colophon</div>
-      <div class="hidden lg:block col-span-6">Issue No. VII · 2026</div>
-      <div class="col-span-6 lg:col-span-3 text-right">© Blanca Beauty Bar</div>
-    </div>
-
-    <div class="grid grid-cols-12 gap-8 lg:gap-12 mb-12 lg:mb-16">
+    <div class="grid grid-cols-12 gap-8 lg:gap-12">
 
       <div class="col-span-12 lg:col-span-5">
-        <p class="display text-5xl lg:text-7xl leading-none">Blanca</p>
-        <p class="hand text-3xl lg:text-4xl mt-1" style="color:#E8C97A; font-weight:700;">Beauty Bar</p>
-        <p class="smcaps text-paper/45 mt-6">Russian Manicure · Diode Laser · Lash &amp; Brow</p>
+        <p class="display text-5xl lg:text-7xl text-ink leading-none">Blanca</p>
+        <p class="hand text-coral text-3xl lg:text-4xl mt-1" style="font-weight:700;">Beauty Bar</p>
+        <p class="smcaps text-ink/60 mt-6">Russian Manicure · Diode Laser · Lash &amp; Brow</p>
       </div>
 
       <div class="col-span-6 lg:col-span-3">
-        <p class="smcaps text-paper/45 mb-3">Studio</p>
-        <p class="serif text-base text-paper/85 leading-relaxed">
+        <p class="smcaps text-coral mb-3">Studio</p>
+        <p class="serif text-base text-ink/85 leading-relaxed">
           392 Clarence Street<br/>
           Citi Plaza<br/>
           London Ontario N6A 3M6<br/>
-          <a href="tel:+15196302272" class="h-link" data-track="phone_click" style="color:#E8C97A;">(519) 630-2272</a>
+          <a href="tel:+15196302272" class="u-link text-coral" data-cursor data-track="phone_click">(519) 630-2272</a>
         </p>
       </div>
 
       <div class="col-span-6 lg:col-span-2">
-        <p class="smcaps text-paper/45 mb-3">Hours</p>
-        <p class="serif text-base text-paper/85 leading-relaxed">
+        <p class="smcaps text-coral mb-3">Hours</p>
+        <p class="serif text-base text-ink/85 leading-relaxed">
           Wed–Fri 10–6:30<br/>
           Sat–Sun 10–5<br/>
-          <span class="text-paper/45 italic">Mon–Tue closed</span>
+          <span class="text-ink/45 italic">Mon–Tue closed</span>
         </p>
       </div>
 
       <div class="col-span-12 lg:col-span-2">
-        <p class="smcaps text-paper/45 mb-3">Pages</p>
-        <p class="serif text-base text-paper/85 leading-relaxed">
-          <a class="h-link block" href="/about/">About</a>
-          <a class="h-link block" href="/services/russian-manicure/">Manicure</a>
-          <a class="h-link block" href="/services/laser/">Laser</a>
-          <a class="h-link block" href="/services/lash-brow/">Lash &amp; Brow</a>
-          <a class="h-link block" href="/lookbook/">Lookbook</a>
-          <a class="h-link block" href="/visit/">Visit</a>
+        <p class="smcaps text-coral mb-3">Pages</p>
+        <p class="serif text-base text-ink/85 leading-relaxed">
+          <a class="u-link block" href="/about/" data-cursor>About</a>
+          <a class="u-link block" href="/services/russian-manicure/" data-cursor>Manicure</a>
+          <a class="u-link block" href="/services/laser/" data-cursor>Laser</a>
+          <a class="u-link block" href="/services/lash-brow/" data-cursor>Lash &amp; Brow</a>
+          <a class="u-link block" href="/lookbook/" data-cursor>Lookbook</a>
+          <a class="u-link block" href="/visit/" data-cursor>Visit</a>
         </p>
       </div>
 
     </div>
 
-    <div class="pt-6 flex flex-col md:flex-row justify-between gap-3 smcaps text-paper/45" style="border-top: 1.5px solid rgba(239,231,214,.2);">
-      <p>© 2026 Blanca Beauty Bar. Woman-owned · LGBTQ+ friendly · Made in London ON.</p>
-      <p>All bookings via Fresha</p>
+    <div class="mt-12 pt-6 flex flex-col md:flex-row justify-between gap-3 smcaps text-ink/50" style="border-top: 1px solid rgba(26,23,21,.1);">
+      <p>© 2026 Blanca Beauty Bar · Woman-owned · LGBTQ+ friendly</p>
+      <p>Made in London, Ontario</p>
     </div>
   </div>
 </footer>
 
-<a href="https://www.fresha.com/a/blanca-beauty-bar-london-392-clarence-street-zkvszbqf" target="_blank" rel="noopener" class="mobile-book" data-track="book_click" data-track-loc="mobile-sticky">
-  <span>Book on Fresha</span><span>→</span>
+<a href="https://www.fresha.com/a/blanca-beauty-bar-london-392-clarence-street-zkvszbqf" target="_blank" rel="noopener" class="mobile-book" data-cursor data-track="book_click" data-track-loc="mobile-sticky">
+  <span>Book on Fresha</span>
+  <span>→</span>
 </a>
 
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.0.42/dist/lenis.min.js"></script>
 <script>
-  (function () {
-    document.addEventListener('click', (e) => {
-      const a = e.target && e.target.closest && e.target.closest('a[href]');
-      if (!a) return;
-      const href = a.getAttribute('href') || '';
-      const isBook = href.includes('fresha.com') || a.dataset.track === 'book_click';
-      if (!isBook) return;
-      const loc = a.dataset.trackLoc || a.closest('section')?.id || 'unknown';
-      const payload = { event: 'book_click', location: loc, href };
-      try { if (typeof gtag === 'function') gtag('event', 'book_click', { location: loc, link_url: href }); } catch (_) {}
-      try { if (typeof fbq === 'function') fbq('track', 'InitiateCheckout', { content_name: 'fresha_booking', source: loc }); } catch (_) {}
-      try { (window.dataLayer = window.dataLayer || []).push(payload); } catch (_) {}
-    }, { capture: true });
-  })();
+  // CTA tracking
+  document.addEventListener('click', (e) => {
+    const a = e.target?.closest?.('a[href]'); if (!a) return;
+    const href = a.getAttribute('href') || '';
+    const isBook = href.includes('fresha.com') || a.dataset.track === 'book_click';
+    if (!isBook) return;
+    const loc = a.dataset.trackLoc || a.closest('section')?.id || 'unknown';
+    try { if (typeof gtag === 'function') gtag('event', 'book_click', { location: loc, link_url: href }); } catch (_) {}
+    try { if (typeof fbq === 'function') fbq('track', 'InitiateCheckout', { content_name: 'fresha_booking', source: loc }); } catch (_) {}
+    try { (window.dataLayer = window.dataLayer || []).push({ event:'book_click', location: loc, href }); } catch (_) {}
+  }, { capture: true });
 
+  // Smooth scroll
   let lenis = null;
   try {
     if (typeof Lenis !== 'undefined') {
-      lenis = new Lenis({
-        duration: 1.0,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        smoothWheel: true, smoothTouch: false,
-      });
-      const raf = (time) => { lenis.raf(time); requestAnimationFrame(raf); };
+      lenis = new Lenis({ duration: 1.1, easing: t => Math.min(1, 1.001 - Math.pow(2, -10*t)), smoothWheel: true, smoothTouch: false });
+      const raf = t => { lenis.raf(t); requestAnimationFrame(raf); };
       requestAnimationFrame(raf);
     }
   } catch (e) {}
@@ -602,69 +875,100 @@
         const el = document.querySelector(id);
         if (el) {
           e.preventDefault();
-          if (lenis) lenis.scrollTo(el, { offset: -70, duration: 1.0 });
+          if (lenis) lenis.scrollTo(el, { offset: -80, duration: 1.1 });
           else el.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       }
     });
   });
 
+  // Header transparent → solid on scroll
+  const navBar = document.getElementById('navBar');
+  let lastY = 0;
+  function onScroll() {
+    const y = window.scrollY;
+    if (y > 80) navBar.classList.add('scrolled');
+    else navBar.classList.remove('scrolled');
+    lastY = y;
+  }
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Custom cursor (desktop only)
+  if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    const dot = document.getElementById('cursorDot');
+    let mx = 0, my = 0, dx = 0, dy = 0;
+    document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; }, { passive: true });
+    function rafCursor() {
+      dx += (mx - dx) * 0.18;
+      dy += (my - dy) * 0.18;
+      dot.style.transform = `translate(${dx}px, ${dy}px) translate(-50%, -50%)`;
+      requestAnimationFrame(rafCursor);
+    }
+    requestAnimationFrame(rafCursor);
+    document.querySelectorAll('a, button, [data-cursor], .gallery-row').forEach(el => {
+      el.addEventListener('mouseenter', () => dot.classList.add('hover'));
+      el.addEventListener('mouseleave', () => dot.classList.remove('hover'));
+    });
+  }
+
+  // Reveals
+  const targets = document.querySelectorAll('.rev.pre, .cascade');
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.06, rootMargin: '0px 0px -8% 0px' });
+  targets.forEach(el => io.observe(el));
+  setTimeout(() => {
+    document.querySelectorAll('.rev.pre').forEach(el => el.classList.add('is-in'));
+    document.querySelectorAll('.cascade').forEach(el => el.classList.add('is-in'));
+  }, 1500);
+
+  // Gallery drag for both lookbook and wall
+  document.querySelectorAll('.gallery-row').forEach(wrap => {
+    let dragging = false, startX = 0, startScroll = 0, pid = null;
+    wrap.addEventListener('pointerdown', (e) => {
+      if (e.pointerType === 'touch') return;
+      dragging = true; pid = e.pointerId; startX = e.clientX; startScroll = wrap.scrollLeft;
+      wrap.classList.add('is-dragging');
+      try { wrap.setPointerCapture(pid); } catch(_) {}
+    });
+    wrap.addEventListener('pointermove', (e) => {
+      if (!dragging || e.pointerId !== pid) return;
+      e.preventDefault();
+      wrap.scrollLeft = startScroll - (e.clientX - startX);
+    });
+    const end = (e) => {
+      if (!dragging || (e && e.pointerId !== pid)) return;
+      dragging = false; wrap.classList.remove('is-dragging');
+      try { wrap.releasePointerCapture(pid); } catch(_) {}
+      pid = null;
+    };
+    wrap.addEventListener('pointerup', end); wrap.addEventListener('pointercancel', end); wrap.addEventListener('pointerleave', end);
+  });
+
+  // Lookbook auto-drift (only the second gallery-row, the lookbook)
   (function () {
-    const wrap = document.querySelector('.gallery-row');
-    if (!wrap) return;
+    const rows = document.querySelectorAll('.gallery-row');
+    if (rows.length < 2) return;
+    const wrap = rows[1]; // lookbook is the second .gallery-row
     const track = wrap.querySelector('.gallery-track');
     if (!track) return;
     const SPEED = 22, PAUSE_AFTER = 1800;
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let pauseUntil = reduceMotion ? Infinity : 0, lastFrame = performance.now(), lastScrollLeft = wrap.scrollLeft;
-    function loopPosition() {
-      const half = track.scrollWidth / 2; if (half <= 0) return;
-      if (wrap.scrollLeft >= half) wrap.scrollLeft -= half;
-      else if (wrap.scrollLeft < 0) wrap.scrollLeft += half;
-    }
-    function tick(now) {
-      const dt = Math.min(0.1, (now - lastFrame) / 1000); lastFrame = now;
-      if (now > pauseUntil) wrap.scrollLeft += SPEED * dt;
-      loopPosition(); lastScrollLeft = wrap.scrollLeft;
-      requestAnimationFrame(tick);
-    }
+    function loopPosition() { const half = track.scrollWidth / 2; if (half <= 0) return; if (wrap.scrollLeft >= half) wrap.scrollLeft -= half; else if (wrap.scrollLeft < 0) wrap.scrollLeft += half; }
+    function tick(now) { const dt = Math.min(0.1, (now - lastFrame) / 1000); lastFrame = now; if (now > pauseUntil) wrap.scrollLeft += SPEED * dt; loopPosition(); lastScrollLeft = wrap.scrollLeft; requestAnimationFrame(tick); }
     requestAnimationFrame(tick);
-    const nudgePause = (extra = 0) => { pauseUntil = performance.now() + PAUSE_AFTER + extra; };
-    wrap.addEventListener('scroll', () => { if (Math.abs(wrap.scrollLeft - lastScrollLeft) > 0.5) nudgePause(); }, { passive: true });
-    wrap.addEventListener('wheel', () => nudgePause(), { passive: true });
-    wrap.addEventListener('touchstart', () => nudgePause(400), { passive: true });
-    wrap.addEventListener('touchend', () => nudgePause(800), { passive: true });
-    let dragging = false, startX = 0, startScroll = 0, pointerId = null;
-    wrap.addEventListener('pointerdown', (e) => {
-      if (e.pointerType === 'touch') return;
-      dragging = true; pointerId = e.pointerId; startX = e.clientX; startScroll = wrap.scrollLeft;
-      wrap.classList.add('is-dragging');
-      try { wrap.setPointerCapture(pointerId); } catch (_) {}
-      nudgePause();
-    });
-    wrap.addEventListener('pointermove', (e) => {
-      if (!dragging || e.pointerId !== pointerId) return;
-      e.preventDefault();
-      wrap.scrollLeft = startScroll - (e.clientX - startX);
-      nudgePause();
-    });
-    const endDrag = (e) => {
-      if (!dragging || (e && e.pointerId !== pointerId)) return;
-      dragging = false; wrap.classList.remove('is-dragging');
-      try { wrap.releasePointerCapture(pointerId); } catch (_) {}
-      pointerId = null; nudgePause();
-    };
-    wrap.addEventListener('pointerup', endDrag);
-    wrap.addEventListener('pointercancel', endDrag);
-    wrap.addEventListener('pointerleave', endDrag);
+    const nudge = (extra = 0) => { pauseUntil = performance.now() + PAUSE_AFTER + extra; };
+    wrap.addEventListener('scroll', () => { if (Math.abs(wrap.scrollLeft - lastScrollLeft) > 0.5) nudge(); }, { passive: true });
+    wrap.addEventListener('wheel', () => nudge(), { passive: true });
+    wrap.addEventListener('pointerdown', () => nudge(2000));
   })();
-
-  const targets = document.querySelectorAll('.rev.pre');
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('is-in'); io.unobserve(entry.target); } });
-  }, { threshold: 0.06, rootMargin: '0px 0px -6% 0px' });
-  targets.forEach(el => io.observe(el));
-  setTimeout(() => { document.querySelectorAll('.rev.pre').forEach(el => el.classList.add('is-in')); }, 1400);
 </script>
 
 </body>
