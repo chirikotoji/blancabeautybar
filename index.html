@@ -113,25 +113,13 @@
   .h-link:hover { color: #C7A87C; }
   .h-link.active { color: #C7A87C; }
 
-  /* Logo wordmark — typeset to mirror her stacked Wix logo */
-  .logo-stack {
-    display: inline-flex; flex-direction: column; align-items: center;
-    line-height: 0.92;
+  /* Brand logo — actual Blanca Beauty wordmark */
+  .logo-img {
+    height: 60px; width: auto; display: block;
+    mix-blend-mode: multiply;
   }
-  .logo-stack .logo-row1 {
-    font-family: 'Bodoni Moda', Didot, serif;
-    font-style: italic; font-weight: 500;
-    font-size: 22px; letter-spacing: 0.01em;
-    color: #1A1A1A;
-  }
-  .logo-stack .logo-row2 {
-    font-family: 'Bodoni Moda', Didot, serif;
-    font-weight: 700;
-    font-size: 14px; letter-spacing: 0.42em; text-transform: uppercase;
-    margin-top: 4px; padding-top: 4px;
-    border-top: 1px solid #1A1A1A;
-    color: #1A1A1A;
-  }
+  .logo-img-sm { height: 48px; }
+  .logo-img-light { mix-blend-mode: screen; filter: invert(1); }
 
   /* Reveal */
   .rev { opacity: 1; transition: opacity .9s ease, transform .9s ease; }
@@ -251,9 +239,8 @@
 <!-- HEADER -->
 <header class="nav-bar sticky top-0 z-40">
   <div class="max-w-[1400px] mx-auto px-5 lg:px-10 h-[88px] flex items-center justify-between gap-6">
-    <a href="/" class="logo-stack" aria-label="Blanca Beauty Bar home">
-      <span class="logo-row1">Blanca</span>
-      <span class="logo-row2">Beauty</span>
+    <a href="/" class="block" aria-label="Blanca Beauty Bar home">
+      <img src="/media/brand/blanca-logo.jpg" alt="Blanca Beauty" class="logo-img" />
     </a>
     <nav class="hidden lg:flex items-center gap-9">
       <a href="/" class="h-link active">Home</a>
@@ -272,9 +259,8 @@
 <!-- MOBILE MENU -->
 <div class="mm" id="mm" aria-hidden="true">
   <div class="mm-head">
-    <a href="/" class="logo-stack">
-      <span class="logo-row1">Blanca</span>
-      <span class="logo-row2">Beauty</span>
+    <a href="/" class="block" aria-label="Blanca Beauty Bar home">
+      <img src="/media/brand/blanca-logo.jpg" alt="Blanca Beauty" class="logo-img logo-img-sm" />
     </a>
     <button class="mm-btn open" id="mmClose" aria-label="Close menu">
       <span></span><span></span><span></span>
@@ -353,7 +339,7 @@
   <div class="grid grid-cols-1 md:grid-cols-3 gap-0">
     <a href="/services/russian-manicure/" class="block group">
       <div class="aspect-[4/5] ph">
-        <img src="/media/client/nail-nude-almond.jpg" alt="Russian manicure work" loading="lazy"/>
+        <img src="/media/brand/work-topdown.jpg" alt="Manicurist filing nails at the studio" loading="lazy"/>
       </div>
       <div class="text-center py-8 px-6 bg-paper">
         <p class="smcaps text-ink group-hover:text-tan transition-colors">Our Services</p>

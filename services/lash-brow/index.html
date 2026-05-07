@@ -31,24 +31,11 @@
   .btn:hover { background: transparent; color: #1A1A1A; }
   .btn-out { display: inline-flex; align-items: center; gap: 0.6rem; background: transparent; color: #1A1A1A; padding: 15px 36px; font-family: 'Montserrat', sans-serif; font-size: 12px; letter-spacing: 0.20em; text-transform: uppercase; font-weight: 600; border: 1.5px solid #1A1A1A; border-radius: 999px; transition: all .25s ease; }
   .btn-out:hover { background: #1A1A1A; color: #FFFFFF; }
-  .logo-stack {
-    display: inline-flex; flex-direction: column; align-items: center;
-    line-height: 0.92;
+  .logo-img {
+    height: 60px; width: auto; display: block;
+    mix-blend-mode: multiply;
   }
-  .logo-stack .logo-row1 {
-    font-family: 'Bodoni Moda', Didot, serif;
-    font-style: italic; font-weight: 500;
-    font-size: 22px; letter-spacing: 0.01em;
-    color: #1A1A1A;
-  }
-  .logo-stack .logo-row2 {
-    font-family: 'Bodoni Moda', Didot, serif;
-    font-weight: 700;
-    font-size: 14px; letter-spacing: 0.42em; text-transform: uppercase;
-    margin-top: 4px; padding-top: 4px;
-    border-top: 1px solid #1A1A1A;
-    color: #1A1A1A;
-  }
+  .logo-img-sm { height: 48px; }
   /* Top bar */
   .top-bar-stick {
     background: #1A1A1A; color: #FFFFFF;
@@ -150,9 +137,8 @@
 
 <header class="sticky top-0 z-40 bg-paper" style="border-bottom: 1px solid rgba(0,0,0,0.06);">
   <div class="max-w-[1500px] mx-auto px-5 lg:px-10 h-[88px] flex items-center justify-between gap-6">
-    <a href="/" class="logo-stack" aria-label="Blanca Beauty Bar home">
-      <span class="logo-row1">Blanca</span>
-      <span class="logo-row2">Beauty</span>
+    <a href="/" class="block" aria-label="Blanca Beauty Bar home">
+      <img src="/media/brand/blanca-logo.jpg" alt="Blanca Beauty" class="logo-img" />
     </a>
     <nav class="hidden lg:flex items-center gap-9">
       <a href="/" class="h-link">Home</a>
@@ -169,9 +155,8 @@
 </header>
 <div class="mm" id="mm" aria-hidden="true">
   <div class="mm-head">
-    <a href="/" class="logo-stack">
-      <span class="logo-row1">Blanca</span>
-      <span class="logo-row2">Beauty</span>
+    <a href="/" class="block" aria-label="Blanca Beauty Bar home">
+      <img src="/media/brand/blanca-logo.jpg" alt="Blanca Beauty" class="logo-img logo-img-sm" />
     </a>
     <button class="mm-btn open" id="mmClose" aria-label="Close menu">
       <span></span><span></span><span></span>
